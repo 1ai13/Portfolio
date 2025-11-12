@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./styles/App.css";
+import Header from "./components/Header.jsx";
+import MyInfo from "./components/MyInfo.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      
+      <Header />
+      <MyInfo />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

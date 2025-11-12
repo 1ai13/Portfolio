@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom,oklch(21% 0.013 258),oklch(28% 0.014 256));
+  height: 100vh;
+  color: var(--color-text);
+}
