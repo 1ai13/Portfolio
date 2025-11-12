@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-body: oklch(21% 0.013 258);
-  --color-bg-primary: oklch(27% 0.014 256);
-  --color-bg-secondary: oklch(32% 0.018 256);
-  --color-primary: oklch(87% 0.169 193);
-  --color-secondary: oklch(59% 0.21 289);
-  --color-text: oklch(93% 0.015 255);
+  --color-bg-body: oklch(21% 0.013 258);        /* Overall app background (darkest) */
+  --color-bg-primary: oklch(26% 0.014 256);     /* Main cards / panels background */
+  --color-bg-secondary: oklch(32% 0.018 256);    /* Elevated elements (dropdowns, modals) */
+  
+  --color-accent-primary: oklch(87% 0.169 193); /* Main neon cyan accent */
+  --color-accent-secondary: oklch(59% 0.21 289);/* Supporting purple accent */
+
+  --color-text: oklch(93% 0.015 255);   /* Main readable text color */
 }
 
 :root {

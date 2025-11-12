@@ -1,13 +1,21 @@
-import Localization from "./Localization.jsx";
+import Internalization from "./Internalization.jsx";
+import translations from "./Translator.jsx";
 
 function Header() {
+  const { home, projects, contact } = translations();
   return (
     <>
-      <header className="header bg-bg-primary  p-4 flex justify-between md:justify-end md:gap-16">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-        <Localization />
+      <header className="header bg-bg-secondary flex justify-between md:justify-end md:gap-16">
+        <a className="hover:bg-bg-primary p-3 md:p-4" href="#">
+          {home}
+        </a>
+        <a className="hover:bg-bg-primary p-3 md:p-4" href="#">
+          {projects}
+        </a>
+        <a className="hover:bg-bg-primary p-3 md:p-4" href="#">
+          {contact}
+        </a>
+        <Internalization />
       </header>
     </>
   );

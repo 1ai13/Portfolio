@@ -1,0 +1,18 @@
+{
+    "EN": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact",
+        "title": "Software Developer",
+        "name": "Unai Gonzalez Sanchez",
+        "about": "Welcome to my Web! I'm a software developer specialized in web applications. During my free time I also learned to create indie games. As a hobby I like to play videogames while I keep learning about this gigantic binary world!"
+    },
+    "ES":{
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "title": "Desarrollador de Software",
+        "name": "Unai González Sánchez",
+        "about": "¡Bienvenido a mi Web! Soy un desarrollador de software especializado en aplicaciones web. Durante mi tiempo libre también aprendí desarrollo indie de juegos. Como pasatiempo me gusta jugar videojuegos mientras sigo aprendiendo de este ¡mundo binario gigantesco!"
+    }
+}

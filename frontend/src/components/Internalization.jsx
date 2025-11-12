@@ -1,31 +1,32 @@
 import { useState } from "react";
 import spainFlag from "../assets/images/spainLocale-icon.png";
 import ukFlag from "../assets/images/unitedKingdomLocale-icon.png";
+import { useLanguage } from "./LanguageManager.jsx";
 
 function Localization() {
   const [isOpen, setIsOpen] = useState(false);
-  const [localeLang, setLocaleLang] = useState("EN");
+  const { lang: localeLang, setLang: setLocaleLang } = useLanguage();
   const [localeFlag, setLocaleFlag] = useState(ukFlag);
 
   return (
     <>
-      <div className="relative">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex justify-center items-center gap-1 cursor-pointer w-14"
-        >
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="relative hover:bg-bg-primary p-3 md:p-4 cursor-pointer"
+      >
+        <div className="flex justify-center items-center gap-1 w-14">
           {localeLang}
           <img className="w-5 h-5" src={localeFlag}></img>
-        </button>
+        </div>
 
         <div
           className={`${
             isOpen ? "flex" : "hidden"
-          } flex-col border rounded-md bg-bg-secondary mt-1 absolute top-full w-14 shadow-xl shadow-bg-secondary`}
+          } flex-col border rounded-md bg-bg-primary absolute top-[85%] w-14`}
         >
           <button
             onClick={changeLocale}
-            className="flex justify-center gap-1 items-center cursor-pointer"
+            className="flex justify-center gap-1 items-center cursor-pointer rounded-md hover:bg-bg-secondary"
           >
             EN
             <img className="w-5 h-5" src={ukFlag}></img>
@@ -34,7 +35,7 @@ function Localization() {
           <hr />
           <button
             onClick={changeLocale}
-            className="flex justify-center gap-1 items-center cursor-pointer"
+            className="flex justify-center gap-1 items-center cursor-pointer rounded-md hover:bg-bg-secondary"
           >
             ES
             <img className="w-5 h-5" src={spainFlag}></img>
