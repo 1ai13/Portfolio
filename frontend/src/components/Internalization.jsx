@@ -16,7 +16,7 @@ function Localization() {
         aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative hover:bg-bg-primary p-3 md:p-4 cursor-pointer"
+        className="relative hover:bg-bg-secondary p-3 md:p-4 cursor-pointer"
       >
         <div className="flex justify-center items-center gap-1 w-14">
           {localeLang}

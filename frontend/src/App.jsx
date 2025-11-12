@@ -2,12 +2,16 @@ import { useState } from "react";
 import "./styles/App.css";
 import Header from "./components/Header.jsx";
 import MyInfo from "./components/MyInfo.jsx";
+import Skills from "./components/Skills.jsx";
 
 function App() {
   return (
     <>
-      <Header />
-      <MyInfo />
+      <div className="bg-linear-to-b from-bg-body to-bg-body-light min-h-screen">
+        <Header />
+        <MyInfo />
+        <Skills />
+      </div>
     </>
   );
 }
