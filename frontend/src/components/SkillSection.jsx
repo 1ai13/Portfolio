@@ -136,6 +136,7 @@ export default function SkillSection({ title, isReversed }) {
         <div className="flex flex-wrap justify-evenly items-center gap-8 m-8 md:m-16 text-center md:w-1/2 md:gap-20 md:mx-auto">
           {Object.entries(techsData[title]).map(([k, v]) => (
             <a
+              role="link"
               key={k}
               className="flex flex-col p-1 w-20 rounded-md items-center hover:bg-bg-terniary active:bg-bg-terniary"
               href={v.url}

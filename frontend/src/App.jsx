@@ -1,8 +1,8 @@
-import { useState } from "react";
 import "./styles/App.css";
 import Header from "./components/Header.jsx";
 import MyInfo from "./components/MyInfo.jsx";
 import Skills from "./components/Skills.jsx";
+import Projects from "./components/Projects.jsx";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Header />
         <MyInfo />
         <Skills />
+        <Projects />
       </div>
     </>
   );
