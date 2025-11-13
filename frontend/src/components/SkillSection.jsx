@@ -6,6 +6,9 @@ import jsIcon from "../assets/images/js-icon.png";
 import jQueryIcon from "../assets/images/jquery-icon.png";
 import reactIcon from "../assets/images/react-icon.png";
 import thymeleafIcon from "../assets/images/thymeleaf-icon.png";
+import bootstrapIcon from "../assets/images/bootstrap-icon.png";
+import tailwindIcon from "../assets/images/tailwind-icon.png";
+import viteIcon from "../assets/images/vite-icon.png";
 
 //Backend Icons
 import csharpIcon from "../assets/images/csharp-icon.png";
@@ -14,7 +17,9 @@ import sqlIcon from "../assets/images/sql-icon.png";
 import mysqlIcon from "../assets/images/mysql-icon.png";
 import nodeIcon from "../assets/images/node-js-icon.png";
 import mongodbIcon from "../assets/images/mongodb-icon.png";
-import expressIcon from "../assets/images/express-icon.jpg";
+import expressIcon from "../assets/images/express-icon.png";
+import jsonIcon from "../assets/images/json-icon.png";
+import xmlIcon from "../assets/images/xml-icon.png";
 
 //Tools Icons
 import gitIcon from "../assets/images/git-icon.png";
@@ -23,6 +28,9 @@ import libGdxIcon from "../assets/images/libgdx-icon.png";
 import gradleIcon from "../assets/images/gradle-icon.png";
 import npmIcon from "../assets/images/npm-icon.png";
 import mavenIcon from "../assets/images/maven-icon.png";
+import eclipseIcon from "../assets/images/eclipse-icon.png";
+import vscodeIcon from "../assets/images/vscode-icon.png";
+import intelliJIcon from "../assets/images/intelliJ-icon.png";
 
 const techsData = {
   FrontEnd: {
@@ -38,6 +46,14 @@ const techsData = {
       icon: jsIcon,
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
+    Bootstrap: {
+      icon: bootstrapIcon,
+      url: "https://getbootstrap.com",
+    },
+    TailwindCSS: {
+      icon: tailwindIcon,
+      url: "https://tailwindcss.com",
+    },
     jQuery: {
       icon: jQueryIcon,
       url: "https://jquery.com/",
@@ -45,6 +61,10 @@ const techsData = {
     React: {
       icon: reactIcon,
       url: "https://reactjs.org/",
+    },
+    Vite: {
+      icon: viteIcon,
+      url: "https://vite.dev",
     },
     Swing: {
       icon: javaIcon,
@@ -88,6 +108,14 @@ const techsData = {
       icon: mongodbIcon,
       url: "https://www.mongodb.com/",
     },
+    JSON: {
+      icon: jsonIcon,
+      url: "https://www.json.org/json-es.html",
+    },
+    XML: {
+      icon: xmlIcon,
+      url: "https://www.w3.org/XML",
+    },
   },
   Tools: {
     Git: {
@@ -113,6 +141,18 @@ const techsData = {
     Maven: {
       icon: mavenIcon,
       url: "https://maven.apache.org",
+    },
+    VSCode: {
+      icon: vscodeIcon,
+      url: "https://code.visualstudio.com",
+    },
+    IntelliJ: {
+      icon: intelliJIcon,
+      url: "https://maven.apache.org",
+    },
+    Eclipse: {
+      icon: eclipseIcon,
+      url: "https://eclipseide.org",
     },
   },
 };
