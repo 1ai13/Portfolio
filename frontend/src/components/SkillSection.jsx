@@ -1,157 +1,123 @@
-//Frontend Icons
-import htmlIcon from "../assets/images/html-icon.png";
-import javaIcon from "../assets/images/java-icon.png";
-import cssIcon from "../assets/images/css-icon.png";
-import jsIcon from "../assets/images/js-icon.png";
-import jQueryIcon from "../assets/images/jquery-icon.png";
-import reactIcon from "../assets/images/react-icon.png";
-import thymeleafIcon from "../assets/images/thymeleaf-icon.png";
-import bootstrapIcon from "../assets/images/bootstrap-icon.png";
-import tailwindIcon from "../assets/images/tailwind-icon.png";
-import viteIcon from "../assets/images/vite-icon.png";
-
-//Backend Icons
-import csharpIcon from "../assets/images/csharp-icon.png";
-import springIcon from "../assets/images/spring-icon.png";
-import sqlIcon from "../assets/images/sql-icon.png";
-import mysqlIcon from "../assets/images/mysql-icon.png";
-import nodeIcon from "../assets/images/node-js-icon.png";
-import mongodbIcon from "../assets/images/mongodb-icon.png";
-import expressIcon from "../assets/images/express-icon.png";
-import jsonIcon from "../assets/images/json-icon.png";
-import xmlIcon from "../assets/images/xml-icon.png";
-
-//Tools Icons
-import gitIcon from "../assets/images/git-icon.png";
-import godotIcon from "../assets/images/godot-icon.png";
-import libGdxIcon from "../assets/images/libgdx-icon.png";
-import gradleIcon from "../assets/images/gradle-icon.png";
-import npmIcon from "../assets/images/npm-icon.png";
-import mavenIcon from "../assets/images/maven-icon.png";
-import eclipseIcon from "../assets/images/eclipse-icon.png";
-import vscodeIcon from "../assets/images/vscode-icon.png";
-import intelliJIcon from "../assets/images/intelliJ-icon.png";
-
 const techsData = {
   FrontEnd: {
     HTML: {
-      icon: htmlIcon,
+      icon: "html-icon.png",
       url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     CSS: {
-      icon: cssIcon,
+      icon: "css-icon.png",
       url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     JavaScript: {
-      icon: jsIcon,
+      icon: "js-icon.png",
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     Bootstrap: {
-      icon: bootstrapIcon,
+      icon: "bootstrap-icon.png",
       url: "https://getbootstrap.com",
     },
     TailwindCSS: {
-      icon: tailwindIcon,
+      icon: "tailwind-icon.png",
       url: "https://tailwindcss.com",
     },
     jQuery: {
-      icon: jQueryIcon,
+      icon: "jquery-icon.png",
       url: "https://jquery.com/",
     },
     React: {
-      icon: reactIcon,
+      icon: "react-icon.png",
       url: "https://reactjs.org/",
     },
     Vite: {
-      icon: viteIcon,
+      icon: "vite-icon.png",
       url: "https://vite.dev",
     },
     Swing: {
-      icon: javaIcon,
+      icon: "java-icon.png",
       url: "https://docs.oracle.com/javase/8/docs/technotes/guides/swing/",
     },
     Thymeleaf: {
-      icon: thymeleafIcon,
+      icon: "thymeleaf-icon.png",
       url: "https://www.thymeleaf.org/",
     },
   },
   BackEnd: {
     Java: {
-      icon: javaIcon,
+      icon: "java-icon.png",
       url: "https://www.java.com/",
     },
     CSharp: {
-      icon: csharpIcon,
+      icon: "csharp-icon.png",
       url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
     },
     Spring: {
-      icon: springIcon,
+      icon: "spring-icon.png",
       url: "https://spring.io/",
     },
     NodeJS: {
-      icon: nodeIcon,
+      icon: "node-js-icon.png",
       url: "https://nodejs.org/",
     },
     ExpressJS: {
-      icon: expressIcon,
+      icon: "express-icon.png",
       url: "https://expressjs.com/",
     },
     SQL: {
-      icon: sqlIcon,
+      icon: "sql-icon.png",
       url: "https://en.wikipedia.org/wiki/SQL",
     },
     MySQL: {
-      icon: mysqlIcon,
+      icon: "mysql-icon.png",
       url: "https://www.mysql.com/",
     },
     MongoDB: {
-      icon: mongodbIcon,
+      icon: "mongodb-icon.png",
       url: "https://www.mongodb.com/",
     },
     JSON: {
-      icon: jsonIcon,
+      icon: "json-icon.png",
       url: "https://www.json.org/json-es.html",
     },
     XML: {
-      icon: xmlIcon,
+      icon: "xml-icon.png",
       url: "https://www.w3.org/XML",
     },
   },
   Tools: {
     Git: {
-      icon: gitIcon,
+      icon: "git-icon.png",
       url: "https://git-scm.com/",
     },
     Godot: {
-      icon: godotIcon,
+      icon: "godot-icon.png",
       url: "https://godotengine.org/",
     },
     LibGDX: {
-      icon: libGdxIcon,
+      icon: "libgdx-icon.png",
       url: "https://libgdx.com/",
     },
     Gradle: {
-      icon: gradleIcon,
+      icon: "gradle-icon.png",
       url: "https://gradle.org/",
     },
     NPM: {
-      icon: npmIcon,
+      icon: "npm-icon.png",
       url: "https://www.npmjs.com/",
     },
     Maven: {
-      icon: mavenIcon,
+      icon: "maven-icon.png",
       url: "https://maven.apache.org",
     },
     VSCode: {
-      icon: vscodeIcon,
+      icon: "vscode-icon.png",
       url: "https://code.visualstudio.com",
     },
     IntelliJ: {
-      icon: intelliJIcon,
-      url: "https://maven.apache.org",
+      icon: "intelliJ-icon.png",
+      url: "https://www.jetbrains.com/idea/",
     },
     Eclipse: {
-      icon: eclipseIcon,
+      icon: "eclipse-icon.png",
       url: "https://eclipseide.org",
     },
   },
@@ -168,7 +134,7 @@ export default function SkillSection({ title, isReversed }) {
       <div
         className={`flex flex-col ${
           isReversed ? "md:flex-row-reverse" : "md:flex-row"
-        } group hover:bg-bg-primary border-b border-accent-primary`}
+        } group hover:bg-bg-primary border-0 border-accent-primary md:border-b`}
       >
         <div className="bg-bg-terniary p-6 w-full md:w-1/4 text-md flex items-center justify-center group-hover:bg-bg-secondary md:text-xl md:min-h-96">
           {displayTitle}

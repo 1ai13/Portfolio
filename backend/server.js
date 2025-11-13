@@ -1,12 +1,10 @@
 import express from "express";
+import cors from "cors";
 import { connectDB } from "./db.js";
 import { PORT } from "./config.js";
 
 const app = express();
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.use(cors());
 
 const db = await connectDB();
 
@@ -17,4 +15,8 @@ app.get("/projects", async (req, res) => {
   } catch (error) {
     console.error("Error fetching projects", error);
   }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

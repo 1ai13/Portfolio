@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useLanguage } from "./LanguageManager.jsx";
-import spainFlag from "../assets/images/spainLocale-icon.png";
-import ukFlag from "../assets/images/unitedKingdomLocale-icon.png";
 
-const FLAGS = { EN: ukFlag, ES: spainFlag };
+const FLAGS = {
+  EN: "unitedKingdomLocale-icon.png",
+  ES: "spainLocale-icon.png",
+};
 
 function Localization() {
   const [isOpen, setIsOpen] = useState(false);
