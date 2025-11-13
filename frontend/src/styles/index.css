@@ -9,8 +9,8 @@
 --color-bg-terniary: oklch(38% 0.022 15);   /* Lighter tertiary background for cards/modal highlights */
 
 /* Accents (red–orange neon) */
---color-accent-primary: oklch(87% 0.18 30);  /* Main neon red/orange */
---color-accent-secondary: oklch(65% 0.21 25); /* Supporting softer red/orange */
+--color-accent-primary: oklch(70% 0.18 25);  /* Softer main red/orange */
+  --color-accent-secondary: oklch(83% 0.21 30); /* Brighter supporting red/orange */
 
   --color-text: oklch(93% 0.015 255);   /* Main readable text color */
 }

@@ -1,24 +1,17 @@
-import htmlIcon from "../assets/images/html-icon.png";
-import javaIcon from "../assets/images/java-icon.png";
+import SkillSection from "./SkillSection.jsx";
+import translations from "./Translator.jsx";
 
 export default function Skills() {
+  const { skillsHeader } = translations();
   return (
     <>
-      <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-10 p-4 text-center md:text-start md:pl-12">
-        Skills
+      <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-10 p-6 text-center border-b border-b-accent-primary md:text-start md:pl-12">
+        {skillsHeader}
       </h2>
-      <div className="flex flex-col md:flex-row">
-        <div className="bg-bg-terniary p-4 text-center text-md md:text-lg md:p-22">
-          FrontEnd
-        </div>
-        <div className="flex gap-3">
-          <div className="hover:bg-bg-primary">
-            <img className="w-10" src={htmlIcon}></img>HTML
-          </div>
-          <div className="hover:bg-bg-primary">
-            <img className="w-10" src={htmlIcon}></img>HTML
-          </div>
-        </div>
+      <div className="flex flex-col">
+        <SkillSection title={"FrontEnd"} isReversed={false} />
+        <SkillSection title={"BackEnd"} isReversed={true} />
+        <SkillSection title={"Tools"} isReversed={false} />
       </div>
     </>
   );

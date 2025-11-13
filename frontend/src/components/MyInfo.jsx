@@ -1,11 +1,12 @@
 import profilePic from "../assets/images/portfolio_pic.jpg";
 import translations from "./Translator.jsx";
+
 function MyInfo() {
   const { title, name, about } = translations();
   return (
     <>
       <img
-        className="size-64 rounded-full mask-radial-from-50% m-auto my-12 md:size-96"
+        className="size-64 rounded-full border-2 border-accent-primary mask-radial-from-50% m-auto my-12 md:size-96"
         src={profilePic}
         alt="Profile Picture"
       />
