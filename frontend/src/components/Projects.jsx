@@ -24,7 +24,7 @@ export default function Projects() {
   return (
     <>
       <section id="projects">
-        <h2 className="bg-bg-secondary border-b border-b-accent-primary text-2xl md:text-3xl font-bold mt-24 md:mt-36 p-6 text-center md:text-end md:pl-12">
+        <h2 className="bg-bg-secondary border-b border-b-accent-primary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center lg:text-end lg:pl-12">
           Projects
         </h2>
         {HUBS.map((text) => {
@@ -37,7 +37,10 @@ export default function Projects() {
             </button>
           );
         })}
-        <div id="apps-container" className="flex flex-col">
+        <div
+          id="apps-container"
+          className="mx-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly"
+        >
           {games.map((app) => {
             return (
               <ProjectCard

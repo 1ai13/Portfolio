@@ -8,13 +8,13 @@ export default function SkillSection({ title, isReversed, skills }) {
     <>
       <div
         className={`flex flex-col ${
-          isReversed ? "md:flex-row-reverse" : "md:flex-row"
-        } group hover:bg-bg-primary border-0 border-accent-primary md:border-b`}
+          isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
+        } group hover:bg-bg-primary border-0 border-accent-primary lg:border-b`}
       >
-        <div className="bg-bg-terniary p-6 w-full md:w-1/4 text-md flex items-center justify-center group-hover:bg-bg-secondary md:text-xl md:min-h-96">
+        <div className="bg-bg-terniary p-6 w-full lg:w-1/4 text-md flex items-center justify-center group-hover:bg-bg-secondary lg:text-xl lg:min-h-96">
           {displayTitle}
         </div>
-        <div className="flex flex-wrap justify-evenly items-center gap-8 m-8 md:m-16 text-center md:w-1/2 md:gap-20 md:mx-auto">
+        <div className="flex flex-wrap justify-evenly items-center gap-8 m-8 lg:m-16 text-center lg:w-1/2 lg:gap-20 lg:mx-auto">
           {skills.map((s) => (
             <a
               role="link"
@@ -22,7 +22,7 @@ export default function SkillSection({ title, isReversed, skills }) {
               className="flex flex-col p-1 w-20 rounded-md items-center hover:bg-bg-terniary active:bg-bg-terniary"
               href={s.url}
             >
-              <img className="w-10 md:w-14" src={s.icon}></img>
+              <img className="w-10 lg:w-14" src={s.icon}></img>
               {s.name}
             </a>
           ))}
