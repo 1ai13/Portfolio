@@ -97,11 +97,192 @@ const projects = [
   },
 ];
 
+const technologies = [
+  {
+    name: "HTML",
+    category: "FrontEnd",
+    icon: "html-icon.png",
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    category: "FrontEnd",
+    icon: "css-icon.png",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "JavaScript",
+    category: "FrontEnd",
+    icon: "js-icon.png",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "Bootstrap",
+    category: "FrontEnd",
+    icon: "bootstrap-icon.png",
+    url: "https://getbootstrap.com",
+  },
+  {
+    name: "TailwindCSS",
+    category: "FrontEnd",
+    icon: "tailwind-icon.png",
+    url: "https://tailwindcss.com",
+  },
+  {
+    name: "jQuery",
+    category: "FrontEnd",
+    icon: "jquery-icon.png",
+    url: "https://jquery.com/",
+  },
+  {
+    name: "React",
+    category: "FrontEnd",
+    icon: "react-icon.png",
+    url: "https://reactjs.org/",
+  },
+  {
+    name: "Vite",
+    category: "FrontEnd",
+    icon: "vite-icon.png",
+    url: "https://vite.dev",
+  },
+  {
+    name: "Swing",
+    category: "FrontEnd",
+    icon: "java-icon.png",
+    url: "https://docs.oracle.com/javase/8/docs/technotes/guides/swing/",
+  },
+  {
+    name: "Thymeleaf",
+    category: "FrontEnd",
+    icon: "thymeleaf-icon.png",
+    url: "https://www.thymeleaf.org/",
+  },
+
+  {
+    name: "Java",
+    category: "BackEnd",
+    icon: "java-icon.png",
+    url: "https://www.java.com/",
+  },
+  {
+    name: "CSharp",
+    category: "BackEnd",
+    icon: "csharp-icon.png",
+    url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+  },
+  {
+    name: "Spring",
+    category: "BackEnd",
+    icon: "spring-icon.png",
+    url: "https://spring.io/",
+  },
+  {
+    name: "NodeJS",
+    category: "BackEnd",
+    icon: "node-js-icon.png",
+    url: "https://nodejs.org/",
+  },
+  {
+    name: "ExpressJS",
+    category: "BackEnd",
+    icon: "express-icon.png",
+    url: "https://expressjs.com/",
+  },
+  {
+    name: "SQL",
+    category: "BackEnd",
+    icon: "sql-icon.png",
+    url: "https://en.wikipedia.org/wiki/SQL",
+  },
+  {
+    name: "MySQL",
+    category: "BackEnd",
+    icon: "mysql-icon.png",
+    url: "https://www.mysql.com/",
+  },
+  {
+    name: "MongoDB",
+    category: "BackEnd",
+    icon: "mongodb-icon.png",
+    url: "https://www.mongodb.com/",
+  },
+  {
+    name: "JSON",
+    category: "BackEnd",
+    icon: "json-icon.png",
+    url: "https://www.json.org/json-es.html",
+  },
+  {
+    name: "XML",
+    category: "BackEnd",
+    icon: "xml-icon.png",
+    url: "https://www.w3.org/XML",
+  },
+
+  {
+    name: "Git",
+    category: "Tools",
+    icon: "git-icon.png",
+    url: "https://git-scm.com/",
+  },
+  {
+    name: "Godot",
+    category: "Tools",
+    icon: "godot-icon.png",
+    url: "https://godotengine.org/",
+  },
+  {
+    name: "LibGDX",
+    category: "Tools",
+    icon: "libgdx-icon.png",
+    url: "https://libgdx.com/",
+  },
+  {
+    name: "Gradle",
+    category: "Tools",
+    icon: "gradle-icon.png",
+    url: "https://gradle.org/",
+  },
+  {
+    name: "NPM",
+    category: "Tools",
+    icon: "npm-icon.png",
+    url: "https://www.npmjs.com/",
+  },
+  {
+    name: "Maven",
+    category: "Tools",
+    icon: "maven-icon.png",
+    url: "https://maven.apache.org",
+  },
+  {
+    name: "VSCode",
+    category: "Tools",
+    icon: "vscode-icon.png",
+    url: "https://code.visualstudio.com",
+  },
+  {
+    name: "IntelliJ",
+    category: "Tools",
+    icon: "intelliJ-icon.png",
+    url: "https://www.jetbrains.com/idea/",
+  },
+  {
+    name: "Eclipse",
+    category: "Tools",
+    icon: "eclipse-icon.png",
+    url: "https://eclipseide.org",
+  },
+];
+
 try {
   await db.collection("projects").deleteMany({});
   await db.collection("projects").insertMany(projects);
+  await db.collection("technologies").deleteMany({});
+  await db.collection("technologies").insertMany(technologies);
 } catch (error) {
-  console.error("Error inserting projects", error);
+  console.error("Error inserting data", error);
 } finally {
   await db.client.close();
   console.log("Closing database connection");

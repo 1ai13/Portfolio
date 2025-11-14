@@ -9,12 +9,12 @@ export default function Projects() {
   const [games, setGames] = useState([]);
   useEffect(() => {
     async function fetchProjects() {
-      const response = await fetch(`${DOMAIN_URL}/projects`);
+      const response = await fetch(DOMAIN_URL + "/projects");
 
       if (!response.ok) throw new Error("Error fetch projects");
 
       const data = await response.json();
-      setApps(data.filter((p) => p.type == "Web"));
+      setApps(data.filter((p) => p.type == "App"));
       setGames(data.filter((p) => p.type == "Game"));
     }
     fetchProjects();
@@ -37,8 +37,6 @@ export default function Projects() {
         })}
         <div id="apps-container" className="flex flex-col">
           {apps.map((app) => {
-            console.log(app);
-
             return (
               <ProjectCard
                 key={app._id}

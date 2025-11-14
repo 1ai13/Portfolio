@@ -17,6 +17,15 @@ app.get("/projects", async (req, res) => {
   }
 });
 
+app.get("/technologies", async (req, res) => {
+  try {
+    const technologies = await db.collection("technologies").find().toArray();
+    res.send(technologies);
+  } catch (error) {
+    console.error("Error fetching technologies", error);
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
