@@ -14,6 +14,8 @@ export default function Projects() {
       if (!response.ok) throw new Error("Error fetch projects");
 
       const data = await response.json();
+      console.log(data);
+
       setApps(data.filter((p) => p.type == "App"));
       setGames(data.filter((p) => p.type == "Game"));
     }
@@ -36,13 +38,15 @@ export default function Projects() {
           );
         })}
         <div id="apps-container" className="flex flex-col">
-          {apps.map((app) => {
+          {games.map((app) => {
             return (
               <ProjectCard
                 key={app._id}
                 title={app.title}
                 desc={app.description}
                 tags={app.tags}
+                logo={app.logo}
+                links={app.links}
               ></ProjectCard>
             );
           })}

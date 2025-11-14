@@ -7,13 +7,14 @@ const projects = [
     description:
       "TOP-DOWN Survival Arena Shooter, survive the waves of enemies and defeat the final boss!",
     type: "Game",
+    logo: "ninja-survivor-logo.png",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/NinjaSurvivor",
       },
       {
-        source: "itch.io",
+        source: "Itch.io",
         url: "https://1ai-13.itch.io/ninja-survivor",
       },
     ],
@@ -24,9 +25,10 @@ const projects = [
     description:
       "Basic Social Media, sign up, search your friends, contact them and publish your posts",
     type: "App",
+    logo: "tomolist-logo.png",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/TomoList",
       },
     ],
@@ -37,13 +39,14 @@ const projects = [
     description:
       "Mage trapped in a labyrinth, explore it, find the keys and try to escape alive!",
     type: "Game",
+    logo: "nowaylaby-logo.png",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/NoWayLabyrinth",
       },
       {
-        source: "itch.io",
+        source: "Itch.io",
         url: "https://1ai-13.itch.io/no-way-labyrinth",
       },
     ],
@@ -54,9 +57,10 @@ const projects = [
     description:
       "Cooperative Drawing Board, draw in a White Board with different brushes with chat room",
     type: "App",
+    logo: "draw-sync-logo.png",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/DrawSync",
       },
     ],
@@ -66,13 +70,14 @@ const projects = [
     title: "Snake Game",
     description: "Arcade stylish game, eat the food but care with the bonuses!",
     type: "Game",
+    logo: "snake-game-logo.png",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/SnakeGame",
       },
       {
-        source: "itch.io",
+        source: "Itch.io",
         url: "https://1ai-13.itch.io/snake-game",
       },
     ],
@@ -83,13 +88,14 @@ const projects = [
     description:
       "Classic pong where you can 1v1 the AI or play with your friend!",
     type: "Game",
+    logo: "pong-game-logo.jpg",
     links: [
       {
-        source: "github",
+        source: "GitHub",
         url: "https://github.com/1ai13/PongGame",
       },
       {
-        source: "itch.io",
+        source: "Itch.io",
         url: "https://1ai-13.itch.io/pong-game",
       },
     ],
