@@ -10,12 +10,12 @@ const projects = [
     logo: "ninja-survivor-logo.png",
     links: [
       {
-        source: "GitHub",
-        url: "https://github.com/1ai13/NinjaSurvivor",
-      },
-      {
         source: "Itch.io",
         url: "https://1ai-13.itch.io/ninja-survivor",
+      },
+      {
+        source: "GitHub",
+        url: "https://github.com/1ai13/NinjaSurvivor",
       },
     ],
     tags: ["Godot", "2D", "C#", "Pixel Art", "Waves"],
@@ -42,12 +42,12 @@ const projects = [
     logo: "nowaylaby-logo.png",
     links: [
       {
-        source: "GitHub",
-        url: "https://github.com/1ai13/NoWayLabyrinth",
-      },
-      {
         source: "Itch.io",
         url: "https://1ai-13.itch.io/no-way-labyrinth",
+      },
+      {
+        source: "GitHub",
+        url: "https://github.com/1ai13/NoWayLabyrinth",
       },
     ],
     tags: ["LibGdx", "2D", "Java", "Pixel Art"],
@@ -73,12 +73,12 @@ const projects = [
     logo: "snake-game-logo.png",
     links: [
       {
-        source: "GitHub",
-        url: "https://github.com/1ai13/SnakeGame",
-      },
-      {
         source: "Itch.io",
         url: "https://1ai-13.itch.io/snake-game",
+      },
+      {
+        source: "GitHub",
+        url: "https://github.com/1ai13/SnakeGame",
       },
     ],
     tags: ["LibGdx", "Arcade", "Java", "Snake"],
@@ -91,12 +91,12 @@ const projects = [
     logo: "pong-game-logo.jpg",
     links: [
       {
-        source: "GitHub",
-        url: "https://github.com/1ai13/PongGame",
-      },
-      {
         source: "Itch.io",
         url: "https://1ai-13.itch.io/pong-game",
+      },
+      {
+        source: "GitHub",
+        url: "https://github.com/1ai13/PongGame",
       },
     ],
     tags: ["LibGdx", "AI", "1v1"],

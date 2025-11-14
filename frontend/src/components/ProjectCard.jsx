@@ -3,15 +3,13 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
     <>
       <button
         role="article"
-        onClick={(links) => {
-          window.open(links.length == 1 ? links[0].url : links[1].url);
-        }}
-        className="border border-accent-primary my-6 rounded-lg flex flex-col sm:flex-row lg:flex-col bg-bg-terniary hover:bg-bg-secondary active:bg-bg-secondary lg:w-1/3"
+        className="border border-accent-primary my-6 rounded-lg flex flex-col sm:flex-row lg:flex-col bg-bg-terniary lg:w-1/3 hover:scale-105 transition-transform duration-150"
       >
         <img
-          className="bg-gray-50 rounded-lg w-full max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80 mx-auto lg:mt-6 lg:border lg:border-accent-primary"
+          className="bg-gray-50 rounded-lg w-full min-h-80 max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80 mx-auto  lg:mb-6 lg:mt-6 lg:border-2 lg:border-accent-primary"
           src={logo}
         ></img>
+        <hr />
         <div className="p-4 my-auto sm:w-1/2 lg:w-full lg:min-h-70">
           <p className="font-bold text-xl text-center">{title}</p>
           <p className="text-center mt-4 sm:mt-8 lg:mt-4 mb-2">{desc}</p>
@@ -33,7 +31,8 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
                 <a
                   key={l.url}
                   href={l.url}
-                  className="flex flex-col items-center"
+                  target="_blank"
+                  className="flex flex-col items-center rounded-full p-2 w-18 hover:bg-bg-secondary active:bg-bg-secondary hover:scale-110 transition-all duration-200"
                 >
                   <img className="w-10" src={l.source + "-icon.png"}></img>
                   {l.source}
