@@ -1,22 +1,27 @@
 {
     "EN": {
-        "home": "Home",
+        "techs": "Technologies",
         "projects": "Projects",
         "contact": "Contact",
         "title": "Software Developer",
         "name": "Unai Gonzalez Sanchez",
-        "about": "Welcome to my Web! I'm a software developer specialized in web applications. During my free time I also learn to create indie games. As a hobby I like to play videogames while I keep learning about this gigantic binary world!",
-        "skillsHeader": "Skills",
-        "skillsTools": "Dev Tools"
+        "welcome": "Welcome to my Web!",
+        "about": "I'm a Software Developer specialized in web applications. Beyond the web, I also develop indie games, exploring different systems, mechanics and designs. As a hobby I like to play videogames while I keep learning about this gigantic binary world!",
+        "skillsHeader": "Technologies",
+        "skillsClient": "Front End",
+        "skillsServer": "Back End",
+        "skillsTools": "Development Tools"
     },
     "ES":{
-        "home": "Inicio",
+        "techs": "Tecnologías",
         "projects": "Proyectos",
         "contact": "Contacto",
         "title": "Desarrollador de Software",
         "name": "Unai González Sánchez",
-        "about": "¡Bienvenido a mi Web! Soy un desarrollador de software especializado en aplicaciones web. Durante mi tiempo libre también aprendo desarrollo indie de juegos. Como pasatiempo me gusta jugar videojuegos mientras sigo aprendiendo de este mundo binario gigantesco!",
-        "skillsHeader": "Habilidades",
+        "welcome": "¡Bienvenido a mi Web!",
+        "about": "Soy un Desarrollador de Software especializado en aplicaciones web. Aparte de la web, también desarrollo juegos indie, explorando diferentes sistemas, mecánicas y diseños. Como pasatiempo me gusta jugar videojuegos mientras sigo aprendiendo de este mundo binario gigantesco!",
+        "skillsClient": "Cliente",
+        "skillsServer": "Servidor",
         "skillsTools": "Herramientas de Desarrollo"
     }
 }

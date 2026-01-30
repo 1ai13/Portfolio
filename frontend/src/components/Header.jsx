@@ -3,9 +3,9 @@ import Internalization from "./Internalization.jsx";
 import translations from "./Translator.jsx";
 
 function Header() {
-  const { home, projects, contact } = translations();
+  const { techs, projects, contact } = translations();
   const navLinks = [
-    { text: home },
+    { text: techs, url: "#skills" },
     { text: projects, url: "#projects" },
     { text: contact },
   ];

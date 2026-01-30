@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard.jsx";
-const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
+import { useLanguage } from "./LanguageManager";
 
+const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const HUBS = ["App Hub", "Game Hub"];
 
 export default function Projects() {
+  const { lang } = useLanguage();
   const [apps, setApps] = useState([]);
   const [games, setGames] = useState([]);
   const [hub, setHub] = useState(HUBS[0]);
@@ -37,8 +39,8 @@ export default function Projects() {
               }}
               key={text}
               className={`${
-                text == hub ? "underline" : ""
-              }  bg-bg-terniary w-1/2 mx-auto text-center text-md md:text-lg p-6 mb-2 lg:mb-6 hover:bg-bg-secondary active:bg-bg-secondary hover:text-xl cursor-pointer`}
+                text == hub ? "underline font-bold" : ""
+              }  bg-bg-terniary ${text == HUBS[0] ? "border-r-2" : ""} border-accent-primary w-1/2 mx-auto text-center text-md md:text-lg p-6 mb-2 lg:mb-6 hover:bg-bg-secondary active:bg-bg-secondary hover:text-xl cursor-pointer`}
             >
               {text}
             </button>
@@ -48,23 +50,27 @@ export default function Projects() {
           {HUBS.map((v) => (
             <div
               key={v}
-              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly ${
+              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly w-screen transition-transform duration-500 ${
                 v == HUBS[0] ? "absolute" : ""
-              } w-screen transition-transform duration-500 ${
+              }  ${
                 hub == v
                   ? "translate-x-0"
                   : `${v == HUBS[0] ? "-" : ""}translate-x-full`
               }`}
             >
-              {(v == HUBS[0] ? apps : games).map((app) => {
+              {(v == HUBS[0] ? apps : games).map((project) => {
+                let description =
+                  lang == "EN"
+                    ? project.description_en
+                    : project.description_es;
                 return (
                   <ProjectCard
-                    key={app._id}
-                    title={app.title}
-                    desc={app.description}
-                    tags={app.tags}
-                    logo={app.logo}
-                    links={app.links}
+                    key={project._id}
+                    title={project.title}
+                    desc={description}
+                    tags={project.tags}
+                    logo={project.logo}
+                    links={project.links}
                   ></ProjectCard>
                 );
               })}

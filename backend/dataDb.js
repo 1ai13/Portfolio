@@ -4,105 +4,83 @@ const db = await connectDB();
 const projects = [
   {
     title: "Ninja Survivor",
-    description:
+    description_en:
       "TOP-DOWN Survival Arena Shooter, survive the waves of enemies and defeat the final boss!",
+    description_es:
+      "Shooter de supervivencia en arena vista de desde arriba, ¡Sobrevive a las oleadas de enemigos y derrota al jefe!",
     type: "Game",
     logo: "ninja-survivor-logo.png",
     links: [
-      {
-        source: "Itch.io",
-        url: "https://1ai-13.itch.io/ninja-survivor",
-      },
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/NinjaSurvivor",
-      },
+      { source: "Itch.io", url: "https://1ai-13.itch.io/ninja-survivor" },
+      { source: "GitHub", url: "https://github.com/1ai13/NinjaSurvivor" },
     ],
     tags: ["Godot", "2D", "C#", "Pixel Art", "Waves"],
   },
   {
     title: "TomoList",
-    description:
-      "Basic Social Media, sign up, search your friends, contact them and publish your posts",
+    description_en:
+      "Basic Social Media, sign up and search your friends, you can contact them or publish your own posts",
+    description_es:
+      "Red social básica, regístrate y busca a tus amigos, puedes contactarlos o publicar tus propias fotos",
     type: "App",
     logo: "tomolist-logo.png",
-    links: [
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/TomoList",
-      },
-    ],
-    tags: ["Social", "TFG", "Java", "Spring", "Chat"],
+    links: [{ source: "GitHub", url: "https://github.com/1ai13/TomoList" }],
+    tags: ["Social", "TFG", "Java", "Spring", "Chat", "Posts"],
   },
   {
     title: "No Way Labyrinth",
-    description:
-      "Mage trapped in a labyrinth, explore it, find the keys and try to escape alive!",
+    description_en:
+      "A mage trapped in a labyrinth, explore it, find the keys and try to escape alive!",
+    description_es:
+      "Un mago atrapado en un laberinto, ¡Explóralo, encuentra las llaves y trata de escapar con vida!",
     type: "Game",
     logo: "nowaylaby-logo.png",
     links: [
-      {
-        source: "Itch.io",
-        url: "https://1ai-13.itch.io/no-way-labyrinth",
-      },
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/NoWayLabyrinth",
-      },
+      { source: "Itch.io", url: "https://1ai-13.itch.io/no-way-labyrinth" },
+      { source: "GitHub", url: "https://github.com/1ai13/NoWayLabyrinth" },
     ],
-    tags: ["LibGdx", "2D", "Java", "Pixel Art"],
+    tags: ["LibGdx", "2D", "Java", "Pixel Art", "Maze"],
   },
   {
     title: "Draw Sync",
-    description:
-      "Cooperative Drawing Board, draw in a White Board with different brushes with chat room",
+    description_en:
+      "Cooperative Drawing Board, draw in a White Board with different brushes and a local chat room",
+    description_es:
+      "Pizarra cooperativa, dibuja en una pizarra con diferentes pinceles y una sala de chat",
     type: "App",
     logo: "draw-sync-logo.png",
-    links: [
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/DrawSync",
-      },
-    ],
-    tags: ["Swing", "TCPSockets", "Java", "Chat"],
+    links: [{ source: "GitHub", url: "https://github.com/1ai13/DrawSync" }],
+    tags: ["Swing", "TCPSockets", "Java", "Chat", "Draw"],
   },
   {
     title: "Snake Game",
-    description: "Arcade stylish game, eat the food but care with the bonuses!",
+    description_en:
+      "Arcade Snake game, you can eat everything at your own risk!",
+    description_es:
+      "Snake tipo arcade, ¡Puedes comerlo todo bajo tu propio riesgo!",
     type: "Game",
     logo: "snake-game-logo.png",
     links: [
-      {
-        source: "Itch.io",
-        url: "https://1ai-13.itch.io/snake-game",
-      },
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/SnakeGame",
-      },
+      { source: "Itch.io", url: "https://1ai-13.itch.io/snake-game" },
+      { source: "GitHub", url: "https://github.com/1ai13/SnakeGame" },
     ],
     tags: ["LibGdx", "Arcade", "Java", "Snake"],
   },
   {
     title: "Pong Game",
-    description:
-      "Classic pong where you can 1v1 the AI or play with your friend!",
+    description_en:
+      "Classic pong where you can 1v1 the AI or play with a friend!",
+    description_es:
+      "Pong clásico donde puedes jugar 1v1 contra la IA o con un amigo",
     type: "Game",
     logo: "pong-game-logo.jpg",
     links: [
-      {
-        source: "Itch.io",
-        url: "https://1ai-13.itch.io/pong-game",
-      },
-      {
-        source: "GitHub",
-        url: "https://github.com/1ai13/PongGame",
-      },
+      { source: "Itch.io", url: "https://1ai-13.itch.io/pong-game" },
+      { source: "GitHub", url: "https://github.com/1ai13/PongGame" },
     ],
-    tags: ["LibGdx", "AI", "1v1"],
+    tags: ["LibGdx", "AI", "Multiplayer", "Java", "First Game"],
   },
 ];
-
 const technologies = [
   {
     name: "HTML",
