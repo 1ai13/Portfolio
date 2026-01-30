@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import { useLanguage } from "./LanguageManager";
-
+import translations from "./Translator.jsx";
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const HUBS = ["App Hub", "Game Hub"];
 
 export default function Projects() {
   const { lang } = useLanguage();
+  const { projects } = translations();
   const [apps, setApps] = useState([]);
   const [games, setGames] = useState([]);
   const [hub, setHub] = useState(HUBS[0]);
@@ -18,7 +19,6 @@ export default function Projects() {
       if (!response.ok) throw new Error("Error fetch projects");
 
       const data = await response.json();
-      console.log(data);
 
       setApps(data.filter((p) => p.type == "App"));
       setGames(data.filter((p) => p.type == "Game"));
@@ -29,7 +29,7 @@ export default function Projects() {
     <>
       <section id="projects">
         <h2 className="bg-bg-secondary border-b border-b-accent-primary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center lg:text-end lg:pl-12">
-          Projects
+          {projects}
         </h2>
         {HUBS.map((text) => {
           return (
@@ -50,9 +50,8 @@ export default function Projects() {
           {HUBS.map((v) => (
             <div
               key={v}
-              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly w-screen transition-transform duration-500 ${
-                v == HUBS[0] ? "absolute" : ""
-              }  ${
+              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly w-screen transition-transform duration-500  ${hub == v ? "relative" : "absolute"}  
+              ${
                 hub == v
                   ? `translate-x-0`
                   : `${v == HUBS[0] ? "-translate-x-full" : "translate-x-full"}`

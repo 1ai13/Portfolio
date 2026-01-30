@@ -26,7 +26,6 @@ export default function Skills() {
       const response = await fetch(DOMAIN_URL + "/technologies");
       if (!response.ok) throw new Error("Error fetching skills");
       const data = await response.json();
-      console.log(data);
 
       setFrontendSkills(data.filter((p) => p.category == TITLES.front));
       setBackendSkills(data.filter((p) => p.category == TITLES.back));
