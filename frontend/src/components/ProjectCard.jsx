@@ -12,8 +12,8 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
         <hr />
         <div className="p-4 my-auto sm:w-1/2 lg:w-full lg:min-h-70">
           <p className="font-bold text-xl text-center">{title}</p>
-          <p className="text-center mt-4 sm:mt-8 lg:mt-4 mb-2">{desc}</p>
-          <div className="flex justify-center gap-2 flex-wrap text-center text-sm mb-12">
+          <p className="text-center mt-4 sm:mt-8 lg:mt-4 mb-4">{desc}</p>
+          <div className="flex justify-center gap-2 flex-wrap text-center text-sm mb-10">
             {tags.map((t) => {
               return (
                 <div

@@ -54,8 +54,8 @@ export default function Projects() {
                 v == HUBS[0] ? "absolute" : ""
               }  ${
                 hub == v
-                  ? "translate-x-0"
-                  : `${v == HUBS[0] ? "-" : ""}translate-x-full`
+                  ? `translate-x-0`
+                  : `${v == HUBS[0] ? "-translate-x-full" : "translate-x-full"}`
               }`}
             >
               {(v == HUBS[0] ? apps : games).map((project) => {
