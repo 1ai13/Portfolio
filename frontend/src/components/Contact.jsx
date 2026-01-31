@@ -1,10 +1,13 @@
 import translations from "./Translator.jsx";
-
+import { useRef } from "react";
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
 function Contact() {
+  const emailModal = useRef(null);
+  const btnSend = useRef(null);
   const {
+    successMessage,
+    errorMessage,
     contact,
     form: {
       name,
@@ -86,36 +89,73 @@ function Contact() {
               id="message"
               required
               rows="6"
-              minLength={5}
+              minLength={2}
               maxLength="1500"
               className="bg-white text-black px-2 py-0.5 md:py-1 rounded-lg shadow-md shadow-accent-primary"
             />
           </div>
           <button
-            className="bg-blue-500 w-fit mx-auto my-2 px-3 py-2 b-2 rounded-xl border-white hover:cursor-pointer hover:bg-blue-600 active:bg-blue-300 active:text-white hover:text-black font-bold"
+            name="btnSend"
+            ref={btnSend}
+            className="bg-blue-500 w-fit mx-auto my-2 px-3 py-2 b-2 rounded-xl border-white hover:cursor-pointer hover:bg-blue-600 active:bg-blue-300 active:text-white hover:text-black disabled:bg-gray-500 disabled:text-gray-300 font-bold"
             type="submit"
           >
             {submit}
           </button>
         </form>
+        <dialog
+          id="emailModal"
+          ref={emailModal}
+          closedby="any"
+          onClose={handleCloseModal}
+          className="fixed top-25 mx-auto p-3 lg:text-lg rounded-lg font-semibold shadow-md opacity-95 shadow-accent-primary"
+        ></dialog>
       </section>
     </>
   );
-}
 
-function handleSubmit(e, invalidEmail) {
-  //No refresh on submit
-  e.preventDefault();
-  const email = e.target.email;
+  async function handleSubmit(e, invalidEmail) {
+    //No refresh on submit
+    e.preventDefault();
 
-  //Email custom validation
-  if (!REGEXP.test(email.value)) {
-    email.setCustomValidity(invalidEmail);
-    email.reportValidity();
-    return;
+    const form = e.target;
+    form.btnSend.disabled = true;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const modal = emailModal.current;
+    //Email custom validation
+    if (!REGEXP.test(data.email)) {
+      form.email.setCustomValidity(invalidEmail);
+      form.email.reportValidity();
+      return;
+    }
+    const res = await fetch(DOMAIN_URL + "/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    //Modal behaviour
+    if (res.ok) {
+      modal.innerText = successMessage;
+      modal.classList.remove("bg-red-700");
+      modal.classList.add("bg-green-600");
+      modal.classList.remove("text-red-200");
+      modal.classList.add("text-green-200");
+    } else {
+      modal.innerText = errorMessage;
+      modal.classList.remove("bg-green-600");
+      modal.classList.add("bg-red-700");
+      modal.classList.remove("text-green-200");
+      modal.classList.add("text-red-200");
+      console.error(errorMessage);
+    }
+    modal.show();
   }
 
-  console.log("Submit contact form");
+  function handleCloseModal(e) {
+    btnSend.current.disabled = false;
+  }
 }
 
 export default Contact;

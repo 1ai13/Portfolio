@@ -11,11 +11,13 @@ const transporter = mailer.createTransport({
 });
 
 export default async function contactEmail(data) {
-  transporter.sendEmail({
-    from: EMAIL,
-    to: EMAIL,
-    replyTo: data.userEmail,
-    subject: data.subject,
-    text: data.message,
-  });
+  //   const subject = data.name + `${data.subject ? " | " + data.subject : ""}`;
+  //   transporter.sendMail({
+  //     from: EMAIL,
+  //     to: EMAIL,
+  //     replyTo: data.email,
+  //     subject: subject,
+  //     text: data.message,
+  //   });
+  //   throw new Error("Testing error");
 }
