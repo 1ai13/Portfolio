@@ -8,7 +8,8 @@
         },
         "techs": "Technologies",
         "projects": "Projects",
-        "contact": "Contact",
+        "contact": "Contact Me!",
+        "contactBtn": "Contact",
         "skills": {
             "skillsClient": "Front End",
             "skillsServer": "Back End",
@@ -39,7 +40,8 @@
         },
         "techs": "Tecnologías",
         "projects": "Proyectos",
-        "contact": "Contacto",
+        "contact": "Contáctame!",
+        "contactBtn": "Contacto",
         "skills": {
             "skillsClient": "Cliente",
             "skillsServer": "Servidor",

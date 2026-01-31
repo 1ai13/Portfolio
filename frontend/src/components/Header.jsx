@@ -3,11 +3,11 @@ import Internalization from "./Internalization.jsx";
 import translations from "./Translator.jsx";
 
 function Header() {
-  const { techs, projects, contact } = translations();
+  const { techs, projects, contactBtn } = translations();
   const navLinks = [
     { text: techs, url: "#skills" },
     { text: projects, url: "#projects" },
-    { text: contact, url: "#contact" },
+    { text: contactBtn, url: "#contact" },
   ];
 
   return (
