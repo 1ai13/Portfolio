@@ -11,7 +11,8 @@ const TITLES = {
 
 export default function Skills() {
   const {
-    skills: { techs, skillsClient, skillsServer, skillsTools },
+    techs,
+    skills: { skillsClient, skillsServer, skillsTools },
   } = translations();
   const [backendSkills, setBackendSkills] = useState([]);
   const [frontendSkills, setFrontendSkills] = useState([]);

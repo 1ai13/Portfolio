@@ -26,7 +26,7 @@ function Contact() {
   return (
     <>
       <section id="contact" className="mb-24 md:mb-44">
-        <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-10 p-6 text-center border-b border-b-accent-primary lg:text-start lg:pl-10">
+        <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center border-b border-b-accent-primary lg:text-start lg:pl-10">
           {contact}
         </h2>
         <h3 className="bg-bg-primary sm:text-lg lg:text-xl lg:mb-14 font-semibold  p-6 text-center lg:pl-10">
