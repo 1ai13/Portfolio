@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <>
       <section id="projects">
-        <h2 className="bg-bg-secondary border-b border-b-accent-primary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center lg:text-end lg:pl-12">
+        <h2 className="bg-bg-secondary border-b border-b-accent-primary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center lg:text-end lg:pr-10">
           {projects}
         </h2>
         {HUBS.map((text) => {
@@ -50,7 +50,7 @@ export default function Projects() {
           {HUBS.map((v) => (
             <div
               key={v}
-              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly w-screen transition-transform duration-500  ${hub == v ? "relative" : "absolute"}  
+              className={`px-8 flex flex-col lg:flex-row flex-wrap gap-6 justify-evenly w-screen transition-transform duration-150  ${hub == v ? "relative" : "absolute"}  
               ${
                 hub == v
                   ? `translate-x-0`

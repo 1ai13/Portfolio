@@ -1,27 +1,58 @@
 {
     "EN": {
+        "about": {
+            "title": "Software Developer",
+            "name": "Unai Gonzalez Sanchez",
+            "welcome": "Welcome to my Web!",
+            "info": "I'm a Software Developer specialized in web applications. Beyond the web, I also develop indie games, exploring different systems, mechanics and designs. As a hobby I like to play videogames while I keep learning about this gigantic binary world!"
+        },
         "techs": "Technologies",
         "projects": "Projects",
         "contact": "Contact",
-        "title": "Software Developer",
-        "name": "Unai Gonzalez Sanchez",
-        "welcome": "Welcome to my Web!",
-        "about": "I'm a Software Developer specialized in web applications. Beyond the web, I also develop indie games, exploring different systems, mechanics and designs. As a hobby I like to play videogames while I keep learning about this gigantic binary world!",
-        "skillsHeader": "Technologies",
-        "skillsClient": "Front End",
-        "skillsServer": "Back End",
-        "skillsTools": "Development Tools"
+        "skills": {
+            "skillsClient": "Front End",
+            "skillsServer": "Back End",
+            "skillsTools": "Development Tools"
+        },
+        "form": {
+            "intro": "Still any concerns? Feel free to reach out! Suggestions or feedback are always welcome!",
+            "name": "Name",
+            "nameExample": "ex: John Doe",
+            "email": "Email",
+            "emailExample": "example@example.com",
+            "invalidEmail": "Invalid email format",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Send",
+            "optional": "Optional"
+        }
     },
     "ES":{
+        "about": {
+            "title": "Desarrollador de Software",
+            "name": "Unai González Sánchez",
+            "welcome": "¡Bienvenido a mi Web!",
+            "info": "Soy un Desarrollador de Software especializado en aplicaciones web. Aparte de la web, también desarrollo juegos indie, explorando diferentes sistemas, mecánicas y diseños. Como pasatiempo me gusta jugar videojuegos mientras sigo aprendiendo de este mundo binario gigantesco!"
+        },
         "techs": "Tecnologías",
         "projects": "Proyectos",
         "contact": "Contacto",
-        "title": "Desarrollador de Software",
-        "name": "Unai González Sánchez",
-        "welcome": "¡Bienvenido a mi Web!",
-        "about": "Soy un Desarrollador de Software especializado en aplicaciones web. Aparte de la web, también desarrollo juegos indie, explorando diferentes sistemas, mecánicas y diseños. Como pasatiempo me gusta jugar videojuegos mientras sigo aprendiendo de este mundo binario gigantesco!",
-        "skillsClient": "Cliente",
-        "skillsServer": "Servidor",
-        "skillsTools": "Herramientas de Desarrollo"
+        "skills": {
+            "skillsClient": "Cliente",
+            "skillsServer": "Servidor",
+            "skillsTools": "Herramientas de Desarrollo"
+        },
+        "form": {
+             "intro": "¿Aún tienes alguna duda? ¡No dudes en contactarme! ¡Sugerencias o feedback son siempre bienvenidas!",
+            "name": "Nombre",
+            "nameExample": "ej: Juan Bau",
+            "email": "Correo",
+            "emailExample": "ejemplo@ejemplo.com",
+            "invalidEmail": "Formato de correo inválido",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "submit": "Enviar",
+            "optional": "Opcional"
+        }
     }
 }

@@ -1,7 +1,9 @@
 import translations from "./Translator.jsx";
 
 function MyInfo() {
-  const { title, name, welcome, about } = translations();
+  const {
+    about: { title, name, welcome, info },
+  } = translations();
   return (
     <>
       <section id="info" role="main">
@@ -20,7 +22,7 @@ function MyInfo() {
           {welcome}
         </h3>
         <p className="font-normal mx-4 mb-28 md:mb-42 text-justify md:text-center md:w-1/2 md:mx-auto">
-          {about}
+          {info}
         </p>
       </section>
     </>

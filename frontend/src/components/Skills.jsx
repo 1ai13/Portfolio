@@ -10,7 +10,9 @@ const TITLES = {
 };
 
 export default function Skills() {
-  const { techs, skillsClient, skillsServer, skillsTools } = translations();
+  const {
+    skills: { techs, skillsClient, skillsServer, skillsTools },
+  } = translations();
   const [backendSkills, setBackendSkills] = useState([]);
   const [frontendSkills, setFrontendSkills] = useState([]);
   const [toolsSkills, setToolsSkills] = useState([]);
@@ -38,7 +40,7 @@ export default function Skills() {
   return (
     <>
       <section id="skills">
-        <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-10 p-6 text-center border-b border-b-accent-primary lg:text-start lg:pl-12">
+        <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-10 p-6 text-center border-b border-b-accent-primary lg:text-start lg:pl-10">
           {techs}
         </h2>
         <div className="flex flex-col">

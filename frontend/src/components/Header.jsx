@@ -7,7 +7,7 @@ function Header() {
   const navLinks = [
     { text: techs, url: "#skills" },
     { text: projects, url: "#projects" },
-    { text: contact },
+    { text: contact, url: "#contact" },
   ];
 
   return (
