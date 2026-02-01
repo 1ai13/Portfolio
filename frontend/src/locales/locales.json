@@ -8,6 +8,12 @@
             "spinner": {
                 "undizzy": "Spin me!",
                 "dizzy": "Oups, I'm dizzy!"
+            },
+            "btnCV": {
+                "text": "My CV",
+                "modalInfo": "The CV will be downloaded based on the current language, select the desired one before proceeding",
+                "success": "Download",
+                "fail": "Close"
             }
         },
         "techs": "Technologies",
@@ -49,11 +55,17 @@
             "spinner": {
                 "undizzy": "¡Gírame!",
                 "dizzy": "Ups, ¡Me mareé!"
+            },
+            "btnCV": {
+                "text": "Mi CV",
+                "modalInfo": "El CV sera descargado en base al actual idioma, seleccione el deseado antes de continuar",
+                "success": "Descargar",
+                "fail": "Cerrar"
             }
         },
         "techs": "Tecnologías",
         "projects": "Proyectos",
-        "contact": "Contáctame!",
+        "contact": "¡Contáctame!",
         "contactBtn": "Contacto",
         "skills": {
             "skillsClient": "Cliente",

@@ -41,6 +41,7 @@ function Contact() {
           onSubmit={(e) => handleSubmit(e, invalidEmail)}
           className="bg-bg-terniary flex flex-col px-3 py-1 m-8 border-2 sm:w-1/2 lg:w-1/3 sm:mx-auto lg:p-7 lg:py-3 border-accent-primary gap-4 md:gap-5 rounded-lg"
         >
+          <img src="emailHeader-icon.png" className="mx-auto w-20" />
           <div id="field-name" className="flex flex-col">
             <label htmlFor="name" className="font-bold w-fit h-fit">
               {name + ":"}
