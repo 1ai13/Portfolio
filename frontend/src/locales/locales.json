@@ -16,11 +16,11 @@
             "skillsTools": "Development Tools"
         },
         "form": {
-            "intro": "Still any concerns? Feel free to reach out! Suggestions or feedback are always welcome!",
+            "intro": "Still any concerns? Feel free to reach out, suggestions or feedback are always welcome!",
             "name": "Name",
             "nameExample": "ex: John Doe",
             "email": "Email",
-            "emailExample": "example@example.com",
+            "emailExample": "ex: email@example.com",
             "invalidEmail": "Invalid email format",
             "subject": "Subject",
             "message": "Message",
@@ -48,11 +48,11 @@
             "skillsTools": "Herramientas de Desarrollo"
         },
         "form": {
-             "intro": "¿Aún tienes alguna duda? ¡No dudes en contactarme! ¡Sugerencias o feedback son siempre bienvenidas!",
+             "intro": "¿Aún tienes alguna duda? ¡No dudes en contactarme, sugerencias o feedback son siempre bienvenidos!",
             "name": "Nombre",
             "nameExample": "ej: Juan Bau",
             "email": "Correo",
-            "emailExample": "ejemplo@ejemplo.com",
+            "emailExample": "ej: email@ejemplo.com",
             "invalidEmail": "Formato de correo inválido",
             "subject": "Asunto",
             "message": "Mensaje",

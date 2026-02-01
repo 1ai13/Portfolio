@@ -44,9 +44,9 @@ const projects = [
   {
     title: "Draw Sync",
     description_en:
-      "Cooperative Drawing Board, draw in a White Board with different brushes and a local chat room",
+      "Cooperative Drawing Board, draw in a White Board with different brushes and a local chat",
     description_es:
-      "Pizarra cooperativa, dibuja en una pizarra con diferentes pinceles y una sala de chat",
+      "Pizarra cooperativa, dibuja en una pizarra con diferentes pinceles y un chat local",
     type: "App",
     logo: "draw-sync-logo.png",
     links: [{ source: "GitHub", url: "https://github.com/1ai13/DrawSync" }],

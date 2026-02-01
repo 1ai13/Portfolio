@@ -4,7 +4,7 @@ const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 function Contact() {
   const emailModal = useRef(null);
-  const btnSend = useRef(null);
+
   const {
     successMessage,
     errorMessage,
@@ -96,7 +96,6 @@ function Contact() {
           </div>
           <button
             name="btnSend"
-            ref={btnSend}
             className="bg-blue-500 w-fit mx-auto my-2 px-3 py-2 b-2 rounded-xl border-white hover:cursor-pointer hover:bg-blue-600 active:bg-blue-300 active:text-white hover:text-black disabled:bg-gray-500 disabled:text-gray-300 font-bold"
             type="submit"
           >
@@ -107,8 +106,7 @@ function Contact() {
           id="emailModal"
           ref={emailModal}
           closedby="any"
-          onClose={handleCloseModal}
-          className="fixed top-25 mx-auto p-3 lg:text-lg rounded-lg font-semibold shadow-md opacity-95 shadow-accent-primary"
+          className="block fixed top-25 mx-auto p-3 lg:text-lg rounded-lg font-semibold shadow-md5 shadow-accent-primary transition-opacity duration-500 opacity-0 cursor-default"
         ></dialog>
       </section>
     </>
@@ -134,7 +132,8 @@ function Contact() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-
+    modal.classList.remove("opacity-0");
+    modal.classList.add("opacity-100");
     //Modal behaviour
     if (res.ok) {
       modal.innerText = successMessage;
@@ -150,11 +149,12 @@ function Contact() {
       modal.classList.add("text-red-200");
       console.error(errorMessage);
     }
-    modal.show();
-  }
-
-  function handleCloseModal(e) {
-    btnSend.current.disabled = false;
+    form.reset();
+    setTimeout(() => {
+      modal.classList.remove("opacity-100");
+      modal.classList.add("opacity-0");
+      form.btnSend.disabled = false;
+    }, 4000);
   }
 }
 
