@@ -2,6 +2,11 @@ import translations from "./Translator.jsx";
 import { useRef } from "react";
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const TOAST_TYPE = {
+  SUCCESS: "SUCCESS",
+  ERROR: "ERROR",
+};
+
 function Contact() {
   const emailModal = useRef(null);
 
@@ -127,30 +132,48 @@ function Contact() {
       form.email.reportValidity();
       return;
     }
-    const res = await fetch(DOMAIN_URL + "/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    modal.classList.remove("opacity-0");
-    modal.classList.add("opacity-100");
-    //Modal behaviour
-    if (res.ok) {
-      modal.innerText = successMessage;
-      modal.classList.remove("bg-red-700", "text-red-200");
+
+    //Validation ok
+    try {
+      const res = await fetch(DOMAIN_URL + "/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      //Modal behaviour
+      if (res.ok) {
+        showToast(modal, TOAST_TYPE.SUCCESS);
+      } else {
+        showToast(modal, TOAST_TYPE.ERROR);
+      }
+    } catch (error) {
+      showToast(modal, TOAST_TYPE.ERROR);
+    } finally {
+      modal.classList.remove("opacity-0");
+      modal.classList.add("opacity-100");
+      setTimeout(() => {
+        modal.classList.remove("opacity-100");
+        modal.classList.add("opacity-0");
+        form.btnSend.disabled = false;
+      }, 4000);
+    }
+  }
+
+  function showToast(modal, type) {
+    modal.classList.remove(
+      "bg-red-700",
+      "bg-green-600",
+      "text-red-200",
+      "text-green-200",
+    );
+    if (type == TOAST_TYPE.SUCCESS) {
       modal.classList.add("bg-green-600", "text-green-200");
     } else {
-      modal.innerText = errorMessage;
-      modal.classList.remove("bg-green-600", "text-green-200");
       modal.classList.add("bg-red-700", "text-red-200");
       console.error(errorMessage);
     }
-    form.reset();
-    setTimeout(() => {
-      modal.classList.remove("opacity-100");
-      modal.classList.add("opacity-0");
-      form.btnSend.disabled = false;
-    }, 4000);
+    modal.innerText =
+      type == TOAST_TYPE.SUCCESS ? successMessage : errorMessage;
   }
 }
 

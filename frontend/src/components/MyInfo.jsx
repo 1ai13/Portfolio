@@ -1,11 +1,33 @@
 import translations from "./Translator.jsx";
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
+
 function MyInfo() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [isDizzy, setIsDizzy] = useState();
-  const myPic = useRef(null);
+
+  useEffect(() => {
+    if (isSpinning && !isDizzy) {
+      const id = setTimeout(() => {
+        setIsDizzy(true);
+      }, 7000);
+      return () => clearTimeout(id);
+    }
+    if (!isSpinning && isDizzy) {
+      const id = setTimeout(() => {
+        setIsDizzy(false);
+      }, 5000);
+      return () => clearTimeout(id);
+    }
+  }, [isSpinning, isDizzy]);
+
   const {
-    about: { title, name, welcome, info },
+    about: {
+      title,
+      name,
+      welcome,
+      info,
+      spinner: { dizzy, undizzy },
+    },
   } = translations();
   return (
     <>
@@ -17,15 +39,14 @@ function MyInfo() {
             className={`flex mb-6 size-64 md:size-96 border-2 border-accent-primary rounded-full hover:scale-105 transition-transform duration-200 ${isSpinning ? "rotating" : ""}`}
           >
             <img
-              ref={myPic}
               className="rounded-full mask-radial-from-50%"
-              src="portfolio_pic.jpg"
+              src={`${isDizzy ? "portfolioDizzy_pic.jpg" : "portfolio_pic.jpg"}`}
               alt="Profile Picture"
             />
           </a>
 
           <div
-            className={`md:ml-12 ${isDizzy ? "md:w-60" : "md:w-28"} md:absolute md:left-full md:top-1/2`}
+            className={`md:ml-12 ${isDizzy ? "md:w-44" : "md:w-28"} md:absolute md:left-full md:top-1/2`}
           >
             <input
               onChange={handleSpinner}
@@ -52,7 +73,7 @@ function MyInfo() {
                   className={`transition-transform duration-300 ${isSpinning ? "translate-x-3.5" : ""}`}
                 />
               </svg>
-              {isDizzy ? "Ouh, great... now im dizzy" : "Spin me!"}
+              {isDizzy ? dizzy : undizzy}
             </label>
           </div>
         </div>
@@ -77,38 +98,7 @@ function MyInfo() {
   );
 
   function handleSpinner(event) {
-    let cont = 0;
-    let unDizzyCont = 0;
     setIsSpinning(event.target.checked);
-    if (event.target.checked) {
-      const id = setInterval(() => {
-        if (cont >= 5 && !isDizzy) {
-          setIsDizzy(true);
-          myPic.current.src = "portfolioDizzy_pic.jpg";
-          clearInterval(id);
-        }
-        if (!event.target.checked) {
-          cont = 0;
-          clearInterval(id);
-        }
-        if (isDizzy) clearInterval(id);
-        cont++;
-      }, 1000);
-    } else if (isDizzy) {
-      const unDizzyId = setInterval(() => {
-        if (unDizzyCont >= 5) {
-          setIsDizzy(false);
-          myPic.current.src = "portfolio_pic.jpg";
-          clearInterval(unDizzyId);
-        }
-        if (event.target.checked) {
-          unDizzyCont = 0;
-          clearInterval(unDizzyId);
-        }
-        if (!isDizzy) clearInterval(unDizzyId);
-        unDizzyCont++;
-      }, 1000);
-    }
   }
 }
 
