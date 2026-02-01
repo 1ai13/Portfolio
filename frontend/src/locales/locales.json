@@ -28,7 +28,12 @@
             "optional": "Optional"
         },
         "successMessage":"The email was sent successfully!",
-        "errorMessage":"An error occurred while sending the email!"
+        "errorMessage":"An error occurred while sending the email!",
+        "footer": {
+            "copy": "All rights reserved.",
+            "locationTrans": "Spain",
+            "statusTrans": "Part-time (flexible hours)"
+        }
     },
 
     "ES":{
@@ -60,6 +65,11 @@
             "optional": "Opcional"
         },
         "successMessage":"El correo fue enviado correctamente!",
-        "errorMessage":"¡Ocurrió un error al enviar el correo!"
+        "errorMessage":"¡Ocurrió un error al enviar el correo!",
+        "footer": {
+            "copy": "Todos los derechos reservados.",
+            "location": "España",
+            "status": "Medio tiempo (horario flexible)"
+        }
     }
 }
