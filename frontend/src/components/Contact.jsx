@@ -137,16 +137,12 @@ function Contact() {
     //Modal behaviour
     if (res.ok) {
       modal.innerText = successMessage;
-      modal.classList.remove("bg-red-700");
-      modal.classList.add("bg-green-600");
-      modal.classList.remove("text-red-200");
-      modal.classList.add("text-green-200");
+      modal.classList.remove("bg-red-700", "text-red-200");
+      modal.classList.add("bg-green-600", "text-green-200");
     } else {
       modal.innerText = errorMessage;
-      modal.classList.remove("bg-green-600");
-      modal.classList.add("bg-red-700");
-      modal.classList.remove("text-green-200");
-      modal.classList.add("text-red-200");
+      modal.classList.remove("bg-green-600", "text-green-200");
+      modal.classList.add("bg-red-700", "text-red-200");
       console.error(errorMessage);
     }
     form.reset();

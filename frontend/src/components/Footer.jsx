@@ -51,6 +51,7 @@ function Footer() {
           {contactInfo.links.map((l) => {
             return (
               <a
+                key={l.text}
                 href={l.url}
                 target="_blank"
                 className="flex flex-col items-center p-1 rounded-lg hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
@@ -66,7 +67,7 @@ function Footer() {
           © 2026 <span className="font-semibold">1ai</span>. {copy}
         </div>
 
-        <div className="flex flex-col p-4 gap-1.5">
+        <div className="flex flex-col md:items-start p-4 gap-1.5">
           <div className="flex justify-center items-center gap-0.5">
             <img src={location.icon} className="w-5"></img>
             <a
