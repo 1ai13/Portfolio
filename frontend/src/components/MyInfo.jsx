@@ -133,13 +133,13 @@ function MyInfo() {
           {text}
         </button>
         <div className="flex justify-evenly md:justify-center md:gap-20 text-center text-black">
-          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary">
+          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md">
             <div className="flex flex-col">
               <span className="text-2xl">0{followers}</span>
               <span>{followersTrans}</span>
             </div>
           </div>
-          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary">
+          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md">
             <div className="flex flex-col">
               <span className="text-2xl">0{followings}</span>
               <span>{followingsTrans}</span>
