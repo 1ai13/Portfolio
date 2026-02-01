@@ -5,10 +5,16 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
         role="article"
         className="border border-accent-primary my-6 rounded-lg flex flex-col sm:flex-row lg:flex-col bg-bg-terniary lg:w-1/3 hover:scale-105 transition-transform duration-150 shadow-md shadow-accent-primary"
       >
-        <img
-          className="bg-gray-50 rounded-lg w-full min-h-80 max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80 mx-auto  lg:mb-6 lg:mt-6 lg:border-2 lg:border-accent-primary"
-          src={logo}
-        ></img>
+        <a
+          className="bg-gray-50 rounded-lg w-full min-h-80 max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80 mx-auto  lg:mb-6 lg:mt-6 lg:border-2 duration-300 lg:border-accent-primary"
+          target="_blank"
+          href={links[0].url}
+        >
+          <img
+            className="rounded-lg w-full min-h-80 max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80"
+            src={logo}
+          ></img>
+        </a>
         <hr />
         <div className="p-4 my-auto sm:w-1/2 lg:w-full lg:min-h-70">
           <p className="font-bold text-xl text-center">{title}</p>

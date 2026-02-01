@@ -2,11 +2,37 @@ import { useLanguage } from "./LanguageManager.jsx";
 import translations from "./Translator.jsx";
 import { useState, useEffect, useRef } from "react";
 
+const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
+var targetFollowers = 0;
+var targetFollowings = 0;
+
 function MyInfo() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [isDizzy, setIsDizzy] = useState();
   const modal = useRef(null);
   const { lang } = useLanguage();
+  const [followers, setFollowers] = useState(0);
+  const [followings, setFollowings] = useState(0);
+
+  useEffect(() => {
+    if (
+      followers == targetFollowers &&
+      followings == targetFollowings &&
+      targetFollowers != 0
+    )
+      return;
+    const id = setInterval(() => {
+      console.log("updating " + targetFollowers + " " + followers);
+      if (followers < targetFollowers) {
+        setFollowers(followers + 1);
+      }
+      if (followings < targetFollowings) {
+        setFollowings(followings + 1);
+      }
+    }, 50);
+    return () => clearInterval(id);
+  }, [followers, followings]);
+
   useEffect(() => {
     if (isSpinning && !isDizzy) {
       const id = setTimeout(() => {
@@ -30,11 +56,18 @@ function MyInfo() {
       info,
       spinner: { dizzy, undizzy },
       btnCV: { text, modalInfo, success, fail },
+      followersTrans,
+      followingsTrans,
     },
   } = translations();
+
+  useEffect(() => {
+    getGitData();
+  }, []);
+
   return (
     <>
-      <section id="info" role="main" className="mb-28 md:mb-42">
+      <section id="info" role="main" className="mb-28 md:mb-36">
         <div className="relative my-16 w-fit mx-auto">
           <a
             href="https://github.com/1ai13"
@@ -95,10 +128,25 @@ function MyInfo() {
         </p>
         <button
           onClick={handleCV}
-          className="block p-2 mx-auto text-white border border-red-600 shadow-sm shadow-accent-primary bg-red-500 rounded cursor-pointer active:bg-red-400 hover:bg-red-600"
+          className="block p-2 mb-10 mx-auto text-white border border-red-600 shadow-sm shadow-accent-primary bg-red-500 rounded cursor-pointer active:bg-red-400 hover:bg-red-600"
         >
           {text}
         </button>
+        <div className="flex justify-evenly md:justify-center md:gap-20 text-center text-black">
+          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary">
+            <div className="flex flex-col">
+              <span className="text-2xl">0{followers}</span>
+              <span>{followersTrans}</span>
+            </div>
+          </div>
+          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary">
+            <div className="flex flex-col">
+              <span className="text-2xl">0{followings}</span>
+              <span>{followingsTrans}</span>
+            </div>
+          </div>
+        </div>
+
         <dialog
           id="modalCV"
           className="fixed bg-bg-terniary text-white p-6 pb-4 mt-40 mx-8 sm:mx-auto sm:w-1/2 lg:w-1/3 xl:w-1/4 text-justify"
@@ -160,6 +208,26 @@ function MyInfo() {
 
   function handleCVResponse(event) {
     modal.current.close();
+  }
+
+  async function getGitData() {
+    try {
+      const res = await fetch(DOMAIN_URL + "/git-data");
+      if (!res.ok) console.error("Error getting git data");
+
+      if (res.ok) {
+        const data = await res.json();
+        targetFollowers = data.followers.length;
+        targetFollowings = data.following.length;
+      } else {
+        setFollowers(0);
+        setFollowings(0);
+      }
+    } catch (error) {
+      setFollowers(0);
+      setFollowings(0);
+      console.error("Error getting git data " + error);
+    }
   }
 }
 

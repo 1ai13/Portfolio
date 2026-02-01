@@ -14,7 +14,9 @@
                 "modalInfo": "The CV will be downloaded based on the current language, select the desired one before proceeding",
                 "success": "Download",
                 "fail": "Close"
-            }
+            },
+            "followersTrans": "Followers",
+            "followingsTrans": "Followings"
         },
         "techs": "Technologies",
         "projects": "Projects",
@@ -61,7 +63,9 @@
                 "modalInfo": "El CV sera descargado en base al actual idioma, seleccione el deseado antes de continuar",
                 "success": "Descargar",
                 "fail": "Cerrar"
-            }
+            },
+            "followersTrans": "Seguidores",
+            "followingsTrans": "Seguidos"
         },
         "techs": "Tecnologías",
         "projects": "Proyectos",
