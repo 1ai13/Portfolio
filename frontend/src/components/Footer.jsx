@@ -56,7 +56,7 @@ function Footer() {
                 target="_blank"
                 className="flex flex-col items-center p-1 rounded-lg hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
               >
-                <img src={"/" + l.icon} className="w-10"></img>
+                <img src={l.icon} className="w-10"></img>
                 {l.text}
               </a>
             );
