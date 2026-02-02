@@ -114,7 +114,7 @@ function MyInfo() {
   useEffect(() => {
     const id = setTimeout(() => {
       setIsLoaded(true);
-      // getGitData();
+      getGitData();
     }, 2650);
 
     return () => clearTimeout(id);
