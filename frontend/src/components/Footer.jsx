@@ -13,7 +13,7 @@ function Footer() {
         text: "LinkedIn",
       },
       {
-        icon: "GitHub-icon.png",
+        icon: "gitHub-icon.png",
         url: "https://github.com/1ai13",
         text: "GitHub",
       },
