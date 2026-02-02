@@ -5,7 +5,44 @@ import { useState, useEffect, useRef } from "react";
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 var targetFollowers = 0;
 var targetFollowings = 0;
-
+const animationConfig = [
+  {
+    id: "pic",
+    toRemove: "-translate-y-[100vh]",
+  },
+  {
+    id: "title",
+    toRemove: "-translate-x-[100vw]",
+  },
+  {
+    id: "name",
+    toRemove: "translate-x-[100vw]",
+  },
+  {
+    id: "welcome",
+    toRemove: "translate-x-[100vw]",
+  },
+  {
+    id: "infoText",
+    toRemove: "-translate-x-[100vw]",
+  },
+  {
+    id: "CV",
+    toRemove: "translate-y-[250px]",
+  },
+  {
+    id: "followers",
+    toRemove: "-translate-x-[100vw]",
+  },
+  {
+    id: "followings",
+    toRemove: "translate-x-[100vw]",
+  },
+  {
+    id: "toggleSpin",
+    toRemove: "opacity-0",
+  },
+];
 function MyInfo() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [isDizzy, setIsDizzy] = useState();
@@ -13,7 +50,21 @@ function MyInfo() {
   const { lang } = useLanguage();
   const [followers, setFollowers] = useState(0);
   const [followings, setFollowings] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  useEffect(() => {
+    if (isLoaded) return;
+
+    const timer = setTimeout(() => {
+      animationConfig.forEach((config) => {
+        const el = document.getElementById(config.id);
+        config.toRemove && el?.classList.add(config.toRemove);
+        config.toRemove && el?.classList.remove(config.toRemove);
+      });
+    }, 10); // Small delay to ensure DOM is painted
+
+    return () => clearTimeout(timer);
+  }, []);
   useEffect(() => {
     if (
       followers == targetFollowers &&
@@ -22,7 +73,6 @@ function MyInfo() {
     )
       return;
     const id = setInterval(() => {
-      console.log("updating " + targetFollowers + " " + followers);
       if (followers < targetFollowers) {
         setFollowers(followers + 1);
       }
@@ -62,13 +112,21 @@ function MyInfo() {
   } = translations();
 
   useEffect(() => {
-    getGitData();
+    const id = setTimeout(() => {
+      setIsLoaded(true);
+      // getGitData();
+    }, 2650);
+
+    return () => clearTimeout(id);
   }, []);
 
   return (
     <>
-      <section id="info" role="main" className="mb-28 md:mb-36">
-        <div className="relative my-16 w-fit mx-auto">
+      <section id="info" role="main" className="mb-28 md:mb-36 overflow-hidden">
+        <div
+          id="pic"
+          className="relative my-16 w-fit mx-auto transition-transform duration-500 delay-500 -translate-y-[100vh]"
+        >
           <a
             href="https://github.com/1ai13"
             target="_blank"
@@ -82,7 +140,9 @@ function MyInfo() {
           </a>
 
           <div
-            className={`md:ml-12 ${isDizzy ? "md:w-44" : "md:w-28"} md:absolute md:left-full md:top-1/2`}
+            id="toggleSpin"
+            className={`md:ml-12 ${isDizzy ? "md:w-44" : "md:w-28"} md:absolute md:left-full md:top-1/2 transition-opacity ${isLoaded ? "pointer-events-auto" : "opacity-0 pointer-events-none"}  duration-300 `}
+            style={{ transitionDelay: "3.3s" }}
           >
             <input
               onChange={handleSpinner}
@@ -114,32 +174,58 @@ function MyInfo() {
           </div>
         </div>
 
-        <h1 className="font-extrabold mx-6 text-3xl md:text-5xl text-center mb-2">
+        <h1
+          id="title"
+          className="font-extrabold mx-6 text-3xl md:text-5xl text-center mb-2 transition-transform duration-500 -translate-x-[100vw]"
+          style={{ transitionDelay: "0.80s" }}
+        >
           {title}
         </h1>
-        <h2 className="font-bold text-xl md:text-3xl text-center mb-8">
+        <h2
+          id="name"
+          className="font-bold text-xl md:text-3xl text-center mb-8 transition-transform duration-500 translate-x-[100vw] delay-1000"
+        >
           {name}
         </h2>
-        <h3 className="font-semibold text-lg mx-4 mb-2 text-center md:w-1/2 md:mx-auto">
+        <h3
+          id="welcome"
+          className="font-semibold text-lg mx-4 mb-2 text-center md:w-1/2 md:mx-auto transition-transform duration-500 translate-x-[100vw]"
+          style={{ transitionDelay: "1.5s" }}
+        >
           {welcome}
         </h3>
-        <p className="font-normal mx-6 mb-10 text-justify md:text-center md:w-1/2 md:mx-auto">
+        <p
+          id="infoText"
+          className="font-normal mx-6 md:mx-auto mb-10 text-justify md:text-center md:w-1/2 transition-transform duration-500 -translate-x-[100vw]"
+          style={{ transitionDelay: "1.7s" }}
+        >
           {info}
         </p>
         <button
+          id="CV"
           onClick={handleCV}
-          className="block p-2 mb-10 mx-auto text-white border border-red-600 shadow-sm shadow-accent-primary bg-red-500 rounded cursor-pointer active:bg-red-400 hover:bg-red-600"
+          className="block p-2 mb-10 mx-auto text-white border border-red-600 shadow-sm shadow-accent-primary bg-red-500 rounded cursor-pointer active:bg-red-400 hover:bg-red-600
+          transition-transform duration-500 translate-y-[250px]"
+          style={{ transitionDelay: "2.2s" }}
         >
           {text}
         </button>
         <div className="flex justify-evenly md:justify-center md:gap-20 text-center text-black">
-          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md">
+          <div
+            id="followers"
+            className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 -translate-x-[100vw]"
+            style={{ transitionDelay: "2.5s" }}
+          >
             <div className="flex flex-col">
               <span className="text-2xl">0{followers}</span>
               <span>{followersTrans}</span>
             </div>
           </div>
-          <div className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md">
+          <div
+            id="followings"
+            className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 translate-x-[100vw]"
+            style={{ transitionDelay: "2.5s" }}
+          >
             <div className="flex flex-col">
               <span className="text-2xl">0{followings}</span>
               <span>{followingsTrans}</span>

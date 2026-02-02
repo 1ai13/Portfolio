@@ -111,7 +111,6 @@ function Contact() {
         <dialog
           id="emailModal"
           ref={emailModal}
-          closedby="any"
           className="block fixed top-25 mx-auto p-3 lg:text-lg rounded-lg font-semibold shadow-md5 shadow-accent-primary transition-opacity duration-500 opacity-0 cursor-default"
         ></dialog>
       </section>
@@ -149,7 +148,7 @@ function Contact() {
     } catch (error) {
       showToast(modal, TOAST_TYPE.ERROR);
     } finally {
-      modal.reset();
+      form.reset();
       modal.classList.remove("opacity-0");
       modal.classList.add("opacity-100");
       setTimeout(() => {

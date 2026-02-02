@@ -19,7 +19,7 @@ function Localization() {
         onClick={() => setIsOpen(!isOpen)}
         className={`relative ${
           isOpen ? "bg-bg-secondary" : ""
-        } hover:bg-bg-secondary p-3 md:p-4 cursor-pointer`}
+        } hover:bg-bg-secondary p-3 md:p-4 md:pr-0 cursor-pointer`}
       >
         <div className="flex justify-center items-center gap-1 w-14">
           {localeLang}
