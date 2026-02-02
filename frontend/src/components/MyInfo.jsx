@@ -14,8 +14,6 @@ function MyInfo() {
   const [followers, setFollowers] = useState(0);
   const [followings, setFollowings] = useState(0);
 
-  //TO DO: FORM RESET, SEND BUTTON, TEXTO TRANSLATION, FLECHITA PA ARRIBA
-
   useEffect(() => {
     if (
       followers == targetFollowers &&
