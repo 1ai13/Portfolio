@@ -123,7 +123,6 @@ function Contact() {
     e.preventDefault();
 
     const form = e.target;
-    form.btnSend.disabled = true;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     const modal = emailModal.current;
@@ -133,8 +132,8 @@ function Contact() {
       form.email.reportValidity();
       return;
     }
-
     //Validation ok
+    form.btnSend.disabled = true;
     try {
       const res = await fetch(DOMAIN_URL + "/contact", {
         method: "POST",
@@ -150,6 +149,7 @@ function Contact() {
     } catch (error) {
       showToast(modal, TOAST_TYPE.ERROR);
     } finally {
+      modal.reset();
       modal.classList.remove("opacity-0");
       modal.classList.add("opacity-100");
       setTimeout(() => {

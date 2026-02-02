@@ -92,8 +92,8 @@
         "errorMessage":"¡Ocurrió un error al enviar el correo!",
         "footer": {
             "copy": "Todos los derechos reservados.",
-            "location": "España",
-            "status": "Medio tiempo (horario flexible)"
+            "locationTrans": "España",
+            "statusTrans": "Medio tiempo (horario flexible)"
         }
     }
 }
