@@ -40,7 +40,10 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
                   target="_blank"
                   className="flex flex-col items-center rounded-3xl p-2 w-18 hover:bg-bg-secondary active:bg-bg-secondary hover:scale-110 transition-all duration-200"
                 >
-                  <img className="w-10" src={l.source + "-icon.png"}></img>
+                  <img
+                    className="w-10"
+                    src={l.source.toLowerCase() + "-icon.png"}
+                  ></img>
                   {l.source}
                 </a>
               );
