@@ -1,5 +1,5 @@
 import translations from "./Translator.jsx";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 const DOMAIN_URL = import.meta.env.VITE_DOMAIN_URL;
 const REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const TOAST_TYPE = {
@@ -27,6 +27,13 @@ function Contact() {
       intro,
     },
   } = translations();
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      fetch(DOMAIN_URL + "/ping");
+    }, 600000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <>

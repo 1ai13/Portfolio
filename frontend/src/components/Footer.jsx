@@ -13,12 +13,12 @@ function Footer() {
         text: "LinkedIn",
       },
       {
-        icon: "gitHub-icon.png",
+        icon: "github-icon.png",
         url: "https://github.com/1ai13",
         text: "GitHub",
       },
       {
-        icon: "Itch.io-icon.png",
+        icon: "itch.io-icon.png",
         url: "https://1ai-13.itch.io",
         text: "Itch.io",
       },

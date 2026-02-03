@@ -56,6 +56,10 @@ app.post("/contact", async (req, res) => {
   }
 });
 
+app.get("/ping", (req, res) => {
+  res.send("Waking up server");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
