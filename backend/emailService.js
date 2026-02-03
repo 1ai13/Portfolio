@@ -8,9 +8,9 @@ const transporter = mailer.createTransport({
     user: EMAIL,
     pass: GOOGLE_APP_PASSWORD,
   },
-  connectionTimeout: 90000, // 90s
-  greetingTimeout: 90000,
-  socketTimeout: 120000,
+  connectionTimeout: 360000, // 90s
+  greetingTimeout: 360000,
+  socketTimeout: 360000,
 });
 
 export default async function contactEmail(data) {
