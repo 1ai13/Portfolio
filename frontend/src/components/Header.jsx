@@ -24,12 +24,16 @@ function Header() {
       <header
         id="header"
         role="navigation"
-        className="header bg-bg-primary flex justify-between md:justify-start md:gap-14 shadow-md shadow-accent-primary transition-transform duration-400 -translate-y-full z-0"
+        className="header bg-bg-primary flex justify-between items-center md:justify-start md:gap-14 shadow-md shadow-accent-primary transition-transform duration-400 -translate-y-full z-0"
       >
         <Internalization />
         {navLinks.map(({ text, url }) => (
           <HeaderLink key={text} text={text} url={url} />
         ))}
+        <img
+          className="hidden ml-auto mr-6 md:block size-10"
+          src="favicon.png"
+        ></img>
       </header>
     </>
   );
