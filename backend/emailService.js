@@ -1,25 +1,16 @@
-import mailer from "nodemailer";
-import { EMAIL } from "./config.js";
-import { GOOGLE_APP_PASSWORD } from "./config.js";
+import mailer from "@sendgrid/mail";
+import { EMAIL, SENDGRID_EMAIL, SENDGRID_API_KEY } from "./config.js";
 
-const transporter = mailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: EMAIL,
-    pass: GOOGLE_APP_PASSWORD,
-  },
-  connectionTimeout: 360000, // 90s
-  greetingTimeout: 360000,
-  socketTimeout: 360000,
-});
+mailer.setApiKey(SENDGRID_API_KEY);
 
 export default async function contactEmail(data) {
   const subject = data.name + `${data.subject ? " | " + data.subject : ""}`;
-  transporter.sendMail({
-    from: EMAIL,
+  const res = await mailer.send({
+    from: SENDGRID_EMAIL,
     to: EMAIL,
     replyTo: data.email,
     subject: subject,
     text: data.message,
+    html: data.message,
   });
 }

@@ -8,8 +8,13 @@ import contactEmail from "./emailService.js";
 const GIT_URL = "https://api.github.com/users/1ai13/";
 
 const limiter = rateLimit({
-  windowMs: 15000,
-  max: 10,
+  windowMs: 90000,
+  max: 5,
+});
+
+const emailLimiter = rateLimit({
+  windowMs: 30000,
+  max: 1,
 });
 
 const app = express();
@@ -60,9 +65,10 @@ app.get("/git-data", limiter, async (req, res) => {
   }
 });
 
-app.post("/contact", async (req, res) => {
+app.post("/contact", emailLimiter, async (req, res) => {
   try {
     await contactEmail(req.body);
+    console.error("Email sent: ", res.json());
     res.send("Email sent successfully");
   } catch (error) {
     console.error("Error sending email", error);
