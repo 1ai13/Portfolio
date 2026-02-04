@@ -40,7 +40,7 @@ export default function Projects() {
               key={text}
               className={`${
                 text == hub ? "underline font-bold" : ""
-              }  bg-bg-terniary ${text == HUBS[0] ? "border-r-2" : ""} border-accent-primary w-1/2 mx-auto text-center text-md md:text-lg p-6 mb-2 lg:mb-6 hover:bg-bg-secondary active:bg-bg-secondary hover:text-xl cursor-pointer`}
+              }  bg-bg-terniary ${text == HUBS[0] ? "border-r-2" : ""} border-accent-primary w-1/2 mx-auto text-center transition-all duration-300 text-md md:text-lg p-6 mb-2 lg:mb-6 hover:bg-bg-secondary active:bg-bg-secondary cursor-pointer`}
             >
               {text}
             </button>

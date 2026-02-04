@@ -9,6 +9,7 @@
 --color-bg-primary: oklch(26% 0.014 10);    /* Main cards/panels background */
 --color-bg-secondary: oklch(32% 0.018 12);  /* Elevated elements (dropdowns, modals) */
 --color-bg-terniary: oklch(38% 0.022 15);   /* Lighter tertiary background for cards/modal highlights */
+--color-bg-last: oklch(42% 0.025 15);
 
 /* Accents (red–orange neon) */
 --color-accent-primary: oklch(70% 0.18 25);  /* Softer main red/orange */

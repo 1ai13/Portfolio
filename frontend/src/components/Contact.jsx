@@ -41,12 +41,12 @@ function Contact() {
         <h2 className="bg-bg-secondary text-2xl md:text-3xl font-bold mt-24 lg:mt-36 p-6 text-center border-b border-b-accent-primary lg:text-start lg:pl-10">
           {contact}
         </h2>
-        <h3 className="bg-bg-primary sm:text-lg lg:text-xl lg:mb-14 font-semibold  p-6 text-center lg:pl-10">
+        <h3 className="bg-bg-terniary sm:text-lg lg:text-xl lg:mb-14 font-semibold  p-6 text-center lg:pl-10">
           {intro}
         </h3>
         <form
           onSubmit={(e) => handleSubmit(e, invalidEmail)}
-          className="bg-bg-terniary flex flex-col px-3 py-1 m-8 border-2 sm:w-1/2 lg:w-1/3 sm:mx-auto lg:p-7 lg:py-3 border-accent-primary gap-4 md:gap-5 rounded-lg"
+          className="bg-bg-last flex flex-col px-3 py-1 m-8 border-2 sm:w-1/2 lg:w-1/3 sm:mx-auto lg:p-7 lg:py-3 border-accent-primary gap-4 md:gap-5 transition-transform hover:scale-105 rounded-lg"
         >
           <img src="emailHeader-icon.png" className="mx-auto w-20" />
           <div id="field-name" className="flex flex-col">

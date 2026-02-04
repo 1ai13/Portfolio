@@ -11,7 +11,7 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
           href={links[0].url}
         >
           <img
-            className="rounded-lg w-full min-h-80 max-h-120 sm:w-1/2 lg:rounded-full lg:w-80 lg:h-80"
+            className="rounded-lg w-full min-h-80 max-h-120 lg:rounded-full lg:w-80 lg:h-80"
             src={logo}
           ></img>
         </a>

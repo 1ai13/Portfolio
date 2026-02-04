@@ -8,7 +8,7 @@ export default function SkillSection({ title, isReversed, skills }) {
           isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
         } group hover:bg-bg-primary border-0 border-accent-primary lg:border-b`}
       >
-        <div className="bg-bg-terniary p-6 w-full lg:w-1/4 text-lg flex items-center justify-center group-hover:bg-bg-secondary lg:text-xl lg:min-h-96 group-hover:text-2xl transition-all duration-100">
+        <div className="bg-bg-terniary p-6 w-full lg:w-1/4 text-lg flex items-center justify-center group-hover:bg-bg-secondary lg:text-xl lg:min-h-96 group-hover:text-2xl transition-all duration-200">
           {title}
         </div>
         <div className="flex flex-wrap justify-evenly items-center gap-8 m-8 lg:m-16 text-center lg:w-1/2 lg:gap-20 lg:mx-auto">

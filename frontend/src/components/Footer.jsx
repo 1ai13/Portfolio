@@ -46,7 +46,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-bg-primary border-t border-accent-primary flex flex-col text-center gap-1 md:flex-row justify-center md:justify-around md:items-center">
+      <footer className="bg-bg-secondary border-t border-accent-primary flex flex-col text-center gap-1 md:flex-row justify-center md:justify-around md:items-center">
         <div className="flex justify-evenly p-4 md:gap-8 lg:gap-10 xl:gap-14">
           {contactInfo.links.map((l) => {
             return (
@@ -54,7 +54,7 @@ function Footer() {
                 key={l.text}
                 href={l.url}
                 target="_blank"
-                className="flex flex-col items-center p-1 rounded-lg hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
+                className="flex flex-col w-16 items-center p-1 rounded-lg hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
               >
                 <img src={l.icon} className="w-10"></img>
                 {l.text}
@@ -64,7 +64,7 @@ function Footer() {
         </div>
 
         <div className="p-4">
-          © 2026 <span className="font-semibold">1ai</span>. {copy}
+          © 2026 <span className="font-semibold">UGS</span>. {copy}
         </div>
 
         <div className="flex flex-col md:items-start p-4 gap-1.5">

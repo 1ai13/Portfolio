@@ -20,3 +20,11 @@ body {
 #modalCV::backdrop{
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+#gitIcon:hover{
+  scale: 1.15;
+}
+
+#gitIcon:active{
+  scale: 1.15;
+}

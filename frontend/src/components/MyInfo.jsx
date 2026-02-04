@@ -42,6 +42,10 @@ const animationConfig = [
     id: "toggleSpin",
     toRemove: "opacity-0",
   },
+  // {
+  //   id: "gitIcon",
+  //   toRemove: "opacity-0",
+  // },
 ];
 function MyInfo() {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -65,6 +69,7 @@ function MyInfo() {
 
     return () => clearTimeout(timer);
   }, []);
+
   useEffect(() => {
     if (
       followers == targetFollowers &&
@@ -141,7 +146,7 @@ function MyInfo() {
 
           <div
             id="toggleSpin"
-            className={`md:ml-12 ${isDizzy ? "md:w-44" : "md:w-28"} md:absolute md:left-full md:top-1/2 transition-opacity ${isLoaded ? "pointer-events-auto" : "opacity-0 pointer-events-none"}  duration-300 `}
+            className={`md:ml-12 ${isDizzy ? "md:w-44" : "md:w-28"} md:absolute md:left-full md:top-1/2 transition-opacity ${isLoaded ? "pointer-events-auto" : "opacity-0 pointer-events-none"} duration-300 `}
             style={{ transitionDelay: "3.3s" }}
           >
             <input
@@ -210,10 +215,10 @@ function MyInfo() {
         >
           {text}
         </button>
-        <div className="flex justify-evenly md:justify-center md:gap-20 text-center text-black">
+        <div className="flex justify-center items-center gap-10 text-center text-black m-2">
           <div
             id="followers"
-            className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 -translate-x-[100vw]"
+            className="w-24 h-fit bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 -translate-x-[100vw]"
             style={{ transitionDelay: "2.5s" }}
           >
             <div className="flex flex-col">
@@ -221,9 +226,21 @@ function MyInfo() {
               <span>{followersTrans}</span>
             </div>
           </div>
+          <a
+            id="gitIcon"
+            href="https://github.com/1ai13"
+            target="_blank"
+            className={`transition-all duration-500 opacity-0 ${isLoaded ? "opacity-100 pointer-events-auto" : "pointer-events-none"} flex items-center w-14 h-14 rounded-full border border-accent-secondary shadow shadow-accent-secondary`}
+          >
+            <img
+              src="gitwhite-icon.png"
+              className="size-14 object-cover rounded-full"
+            ></img>
+          </a>
+
           <div
             id="followings"
-            className="w-24 bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 translate-x-[100vw]"
+            className="w-24 h-fit bg-gray-300 border border-accent-primary shadow shadow-accent-secondary rounded-md transition-transform duration-500 translate-x-[100vw]"
             style={{ transitionDelay: "2.5s" }}
           >
             <div className="flex flex-col">

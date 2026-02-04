@@ -19,7 +19,7 @@ function Localization() {
         onClick={() => setIsOpen(!isOpen)}
         className={`relative ${
           isOpen ? "bg-bg-secondary" : ""
-        } hover:bg-bg-secondary p-3 md:p-4 md:pr-0 cursor-pointer`}
+        } hover:bg-bg-secondary pl-1 p-3 md:px-3 md:p-4 cursor-pointer transition-colors duration-300 active:bg-bg-secondary`}
       >
         <div className="flex justify-center items-center gap-1 w-14">
           {localeLang}
@@ -38,7 +38,7 @@ function Localization() {
                 key={lang}
                 role="menuitem"
                 onClick={() => changeLocale(lang)}
-                className="flex justify-center gap-1 items-center cursor-pointer rounded-md hover:bg-bg-secondary active:bg-bg-secondary"
+                className="flex justify-center gap-1 items-center cursor-pointer rounded-md transition-colors duration-300 hover:bg-bg-secondary active:bg-bg-secondary"
               >
                 {lang}
                 <img className="w-5 h-5" src={FLAGS[lang]} alt={lang}></img>
