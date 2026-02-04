@@ -1,3 +1,4 @@
+import rateLimit from "express-rate-limit";
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./db.js";
@@ -6,8 +7,21 @@ import contactEmail from "./emailService.js";
 
 const GIT_URL = "https://api.github.com/users/1ai13/";
 
+const limiter = rateLimit({
+  windowMs: 15000,
+  max: 10,
+});
+
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://devugs.net",
+      "https://www.devugs.net",
+    ],
+  }),
+);
 app.use(express.json());
 
 const db = await connectDB();
@@ -32,7 +46,7 @@ app.get("/technologies", async (req, res) => {
   }
 });
 
-app.get("/git-data", async (req, res) => {
+app.get("/git-data", limiter, async (req, res) => {
   let json = {};
   try {
     const followers = await getGitData("followers");
