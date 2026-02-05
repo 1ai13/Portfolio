@@ -23,7 +23,11 @@ function Localization() {
       >
         <div className="flex justify-center items-center gap-1 w-14">
           {localeLang}
-          <img className="w-5 h-5" src={localeFlag}></img>
+          <img
+            alt={localeLang + " icon"}
+            className="w-5 h-5"
+            src={localeFlag}
+          ></img>
         </div>
 
         <div

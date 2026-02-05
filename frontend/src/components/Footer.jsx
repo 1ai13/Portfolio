@@ -56,7 +56,7 @@ function Footer() {
                 target="_blank"
                 className="flex flex-col w-16 items-center p-1 rounded-lg hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
               >
-                <img src={l.icon} className="w-10"></img>
+                <img alt={l.text + " icon"} src={l.icon} className="w-10"></img>
                 {l.text}
               </a>
             );
@@ -69,7 +69,11 @@ function Footer() {
 
         <div className="flex flex-col md:items-start p-4 gap-1.5">
           <div className="flex justify-center items-center gap-0.5">
-            <img src={location.icon} className="w-5"></img>
+            <img
+              alt={location.text + " icon"}
+              src={location.icon}
+              className="w-5"
+            ></img>
             <a
               href="https://www.google.com/maps/place/Principado+de+Asturias,+Asturias"
               target="_blank"
@@ -79,7 +83,11 @@ function Footer() {
             </a>
           </div>
           <div className="flex justify-center items-center gap-0.5">
-            <img src={email.icon} className="w-5"></img>
+            <img
+              alt={email.text + " icon"}
+              src={email.icon}
+              className="w-5"
+            ></img>
             <a
               href={"mailto:unaigsanchez@gmail.com?subject=" + subject}
               className="hover:text-accent-secondary active:text-accent-primary"
@@ -88,11 +96,19 @@ function Footer() {
             </a>
           </div>
           <div className="flex justify-center items-center gap-0.5">
-            <img src={timezone.icon} className="w-5"></img>
+            <img
+              alt={timezone.text + " icon"}
+              src={timezone.icon}
+              className="w-5"
+            ></img>
             {timezone.text}
           </div>
           <div className="flex justify-center items-center gap-0.5">
-            <img src={status.icon} className="w-5"></img>
+            <img
+              alt={status.text + " icon"}
+              src={status.icon}
+              className="w-5"
+            ></img>
             {status.text}
           </div>
         </div>

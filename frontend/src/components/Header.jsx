@@ -31,6 +31,7 @@ function Header() {
           <HeaderLink key={text} text={text} url={url} />
         ))}
         <img
+          alt={"Logo"}
           className="hidden ml-auto mr-6 md:block size-10"
           src="favicon.png"
         ></img>

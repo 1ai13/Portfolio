@@ -233,6 +233,7 @@ function MyInfo() {
             className={`transition-all duration-500 opacity-0 ${isLoaded ? "opacity-100 pointer-events-auto" : "pointer-events-none"} flex items-center w-14 h-14 rounded-full border border-accent-secondary shadow shadow-accent-secondary`}
           >
             <img
+              alt="GitHub icon"
               src="gitwhite-icon.png"
               className="size-14 object-cover rounded-full"
             ></img>

@@ -11,6 +11,7 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
           href={links[0].url}
         >
           <img
+            alt={title + " logo"}
             className="rounded-lg w-full min-h-80 max-h-120 lg:rounded-full lg:w-80 lg:h-80"
             src={logo}
           ></img>
@@ -41,6 +42,7 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
                   className="flex flex-col items-center rounded-3xl p-2 w-18 hover:bg-bg-secondary active:bg-bg-secondary hover:scale-110 transition-all duration-200"
                 >
                   <img
+                    alt={l.source + " icon"}
                     className="w-10"
                     src={l.source.toLowerCase() + "-icon.png"}
                   ></img>
