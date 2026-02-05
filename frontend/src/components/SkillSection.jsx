@@ -20,7 +20,11 @@ export default function SkillSection({ title, isReversed, skills }) {
               className="flex flex-col p-1 w-20 rounded-md items-center hover:bg-bg-terniary active:bg-bg-terniary hover:scale-110 transition-all duration-200"
               href={s.url}
             >
-              <img className="w-10 lg:w-14" src={s.icon}></img>
+              <img
+                alt={s.name + " icon"}
+                className="w-10 lg:w-14"
+                src={s.icon}
+              ></img>
               {s.name}
             </a>
           ))}
