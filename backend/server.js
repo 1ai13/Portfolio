@@ -18,6 +18,7 @@ const emailLimiter = rateLimit({
 });
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [
@@ -68,7 +69,6 @@ app.get("/git-data", limiter, async (req, res) => {
 app.post("/contact", emailLimiter, async (req, res) => {
   try {
     await contactEmail(req.body);
-    console.error("Email sent: ", res.json());
     res.send("Email sent successfully");
   } catch (error) {
     console.error("Error sending email", error);
