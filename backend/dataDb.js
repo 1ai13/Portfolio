@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Portfolio",
     description_en:
-      "The Portfolio you are watching in case you want to inspect the code! Built with JS, React, Express, CSS and HTML, deployed on Render.",
+      "The Portfolio you are visiting. Just in case you want to inspect the code! Built with JS, React, Express, CSS and HTML, deployed on Render.",
     description_es:
       "El sitio web que estás visitando. ¡Por si quisieras echarle un ojo al código! Construido con JS, React, Express, CSS y HTML, desplegado en Render",
     type: "App",
@@ -27,7 +27,7 @@ const projects = [
     links: [
       {
         source: "Web",
-        url: "https://devugs.net",
+        url: "#",
       },
       {
         source: "GitHub",

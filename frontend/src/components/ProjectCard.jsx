@@ -38,7 +38,7 @@ export default function ProjectCard({ title, desc, tags, logo, links }) {
                 <a
                   key={l.url}
                   href={l.url}
-                  target="_blank"
+                  target={l.url.startsWith("#") ? "_self" : "_blank"}
                   className="flex flex-col justify-center items-center rounded-3xl p-2 w-18 hover:bg-bg-secondary active:bg-bg-secondary hover:scale-110 transition-all duration-200"
                 >
                   <img
