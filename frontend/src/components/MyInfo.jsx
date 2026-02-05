@@ -335,7 +335,7 @@ function MyInfo() {
     } catch (error) {
       setFollowers(0);
       setFollowings(0);
-      console.error("Error getting git data " + error);
+      console.error("Error getting git data");
     }
   }
 }

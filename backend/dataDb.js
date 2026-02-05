@@ -17,6 +17,37 @@ const projects = [
     tags: ["Godot", "2D", "C#", "Pixel Art", "Waves"],
   },
   {
+    title: "Portfolio",
+    description_en:
+      "The Portfolio you are watching in case you want to inspect the code! Built with JS, React, Express, CSS and HTML, deployed on Render.",
+    description_es:
+      "El sitio web que estás visitando. ¡Por si quisieras echarle un ojo al código! Construido con JS, React, Express, CSS y HTML, desplegado en Render",
+    type: "App",
+    logo: "logo-back.jpg",
+    links: [
+      {
+        source: "Web",
+        url: "https://devugs.net",
+      },
+      {
+        source: "GitHub",
+        url: "https://github.com/1ai13/Portfolio",
+      },
+    ],
+    tags: ["Portfolio", "FullStack", "JavaScript", "React", "Express", "HTML"],
+  },
+  {
+    title: "Draw Sync",
+    description_en:
+      "Cooperative Drawing Board, draw in a White Board with different brushes and a local chat",
+    description_es:
+      "Pizarra cooperativa, dibuja en una pizarra con diferentes pinceles y un chat local",
+    type: "App",
+    logo: "draw-sync-logo.png",
+    links: [{ source: "GitHub", url: "https://github.com/1ai13/DrawSync" }],
+    tags: ["Swing", "TCPSockets", "Java", "Chat", "Draw"],
+  },
+  {
     title: "TomoList",
     description_en:
       "Basic Social Media, sign up and search your friends, you can contact them or publish your own posts",
@@ -40,17 +71,6 @@ const projects = [
       { source: "GitHub", url: "https://github.com/1ai13/NoWayLabyrinth" },
     ],
     tags: ["LibGdx", "2D", "Java", "Pixel Art", "Maze"],
-  },
-  {
-    title: "Draw Sync",
-    description_en:
-      "Cooperative Drawing Board, draw in a White Board with different brushes and a local chat",
-    description_es:
-      "Pizarra cooperativa, dibuja en una pizarra con diferentes pinceles y un chat local",
-    type: "App",
-    logo: "draw-sync-logo.png",
-    links: [{ source: "GitHub", url: "https://github.com/1ai13/DrawSync" }],
-    tags: ["Swing", "TCPSockets", "Java", "Chat", "Draw"],
   },
   {
     title: "Snake Game",
@@ -211,6 +231,18 @@ const technologies = [
     url: "https://git-scm.com/",
   },
   {
+    name: "DevOps",
+    category: "Tools",
+    icon: "devops-icon.png",
+    url: "https://es.wikipedia.org/wiki/DevOps",
+  },
+  {
+    name: "Postman",
+    category: "Tools",
+    icon: "postman-icon.png",
+    url: "https://www.postman.com",
+  },
+  {
     name: "Godot",
     category: "Tools",
     icon: "godot-icon.png",
@@ -241,22 +273,10 @@ const technologies = [
     url: "https://maven.apache.org",
   },
   {
-    name: "VSCode",
+    name: "Salesforce",
     category: "Tools",
-    icon: "vscode-icon.png",
-    url: "https://code.visualstudio.com",
-  },
-  {
-    name: "IntelliJ",
-    category: "Tools",
-    icon: "intelliJ-icon.png",
-    url: "https://www.jetbrains.com/idea/",
-  },
-  {
-    name: "Eclipse",
-    category: "Tools",
-    icon: "eclipse-icon.png",
-    url: "https://eclipseide.org",
+    icon: "salesforce-icon.png",
+    url: "https://www.salesforce.com",
   },
 ];
 
