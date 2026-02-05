@@ -207,6 +207,8 @@ function MyInfo() {
           {info}
         </p>
         <button
+          aria-label={"Download Curriculum Vitae"}
+          aria-haspopup="dialog"
           id="CV"
           onClick={handleCV}
           className="block p-2 mb-10 mx-auto text-white border border-red-600 shadow-sm shadow-accent-primary bg-red-500 rounded cursor-pointer active:bg-red-400 hover:bg-red-600
@@ -258,6 +260,7 @@ function MyInfo() {
           ref={modal}
         >
           <button
+            aria-label={"Close download pop up"}
             onClick={handleCVResponse}
             name="cross"
             value="close"
@@ -278,6 +281,7 @@ function MyInfo() {
             {modalInfo}
             <div className="flex justify-center gap-12 mt-4">
               <a
+                aria-label={"Yes, downloading curriculum"}
                 name="Yes"
                 value="download"
                 onClick={handleCVResponse}
@@ -288,6 +292,7 @@ function MyInfo() {
                 {success}
               </a>
               <button
+                aria-label={"Close download curriculum pop up"}
                 name="no"
                 value="close"
                 onClick={handleCVResponse}

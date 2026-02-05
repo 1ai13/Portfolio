@@ -34,6 +34,7 @@ export default function Projects() {
         {HUBS.map((text) => {
           return (
             <button
+              aria-label={"Change HUB to " + text}
               onClick={() => {
                 setHub(text);
               }}

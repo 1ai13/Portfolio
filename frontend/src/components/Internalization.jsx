@@ -39,6 +39,7 @@ function Localization() {
           {Object.keys(FLAGS).map((lang) => {
             return (
               <button
+                aria-label={"Change language to " + lang}
                 key={lang}
                 role="menuitem"
                 onClick={() => changeLocale(lang)}

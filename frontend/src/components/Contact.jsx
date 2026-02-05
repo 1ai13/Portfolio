@@ -112,6 +112,7 @@ function Contact() {
             />
           </div>
           <button
+            aria-label="Send Email"
             name="btnSend"
             className="bg-blue-500 w-fit mx-auto my-2 px-3 py-2 b-2 rounded-xl border-white hover:cursor-pointer hover:bg-blue-600 active:bg-blue-300 active:text-white hover:text-black disabled:bg-gray-500 disabled:text-gray-300 font-bold"
             type="submit"
