@@ -14,7 +14,7 @@ const projects = [
       { source: "Itch.io", url: "https://1ai-13.itch.io/ninja-survivor" },
       { source: "GitHub", url: "https://github.com/1ai13/NinjaSurvivor" },
     ],
-    tags: ["Godot", "2D", "C#", "Pixel Art", "Waves"],
+    tags: ["Godot", "2D", "C#", "Pixel Art", "Waves", "Buffs"],
   },
   {
     title: "Portfolio",
@@ -34,7 +34,15 @@ const projects = [
         url: "https://github.com/1ai13/Portfolio",
       },
     ],
-    tags: ["Portfolio", "FullStack", "JavaScript", "React", "Express", "HTML"],
+    tags: [
+      "Portfolio",
+      "FullStack",
+      "JavaScript",
+      "React",
+      "Express",
+      "HTML",
+      "MongoDB",
+    ],
   },
   {
     title: "Draw Sync",
@@ -45,7 +53,7 @@ const projects = [
     type: "App",
     logo: "draw-sync-logo.png",
     links: [{ source: "GitHub", url: "https://github.com/1ai13/DrawSync" }],
-    tags: ["Swing", "TCPSockets", "Java", "Chat", "Draw"],
+    tags: ["Swing", "TCPSockets", "Java", "Chat", "Draw", "Local"],
   },
   {
     title: "TomoList",
@@ -56,7 +64,7 @@ const projects = [
     type: "App",
     logo: "tomolist-logo.png",
     links: [{ source: "GitHub", url: "https://github.com/1ai13/TomoList" }],
-    tags: ["Social", "TFG", "Java", "Spring", "Chat", "Posts"],
+    tags: ["Social", "TFG", "Java", "Spring", "Chat", "Posts", "Login"],
   },
   {
     title: "No Way Labyrinth",
@@ -84,7 +92,7 @@ const projects = [
       { source: "Itch.io", url: "https://1ai-13.itch.io/snake-game" },
       { source: "GitHub", url: "https://github.com/1ai13/SnakeGame" },
     ],
-    tags: ["LibGdx", "Arcade", "Java", "Snake"],
+    tags: ["LibGdx", "Arcade", "Java", "Snake", "Food"],
   },
   {
     title: "Pong Game",
